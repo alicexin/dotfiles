@@ -1,0 +1,42 @@
+{
+   "checksum": "bcdaad6eac3a9225232131009c9adabd",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13042526990740210",
+            "id": "4",
+            "name": "http://ubuntuforums.org/showthread.php?t=1358404 is not available",
+            "type": "url",
+            "url": "http://ubuntuforums.org/showthread.php?t=1358404"
+         }, {
+            "date_added": "13042631482102421",
+            "id": "5",
+            "name": "Aura - The secure multilingual package manager (1.2.3.1) (Page 11) / Community Contributions / Arch Linux Forums",
+            "type": "url",
+            "url": "https://bbs.archlinux.org/viewtopic.php?pid=1406246"
+         } ],
+         "date_added": "13042516939773700",
+         "date_modified": "13042631482102421",
+         "id": "1",
+         "name": "Bookmarks Bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13042516939773709",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Other Bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13042516939773711",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Mobile Bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

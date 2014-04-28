@@ -1,0 +1,56 @@
+#! /bin/sh
+#
+# Example panel for LemonBoy's bar
+
+logo="\\b0\\f1\\ab $(hostname -s)\\b1\\f0⮀\\fr\\ac ~/.config/bspwm/panel/scripts/spawn_dmenu \\ae"
+while read -r line ; do
+	case $line in
+	S*)
+		sys_infos="\\r${line#?}\\fr"
+	;;
+	T*)
+		title="\\fr ${line#?} \\fr"
+	;;
+	W*)
+		wm_infos=""
+		IFS=':'
+		set -- ${line#?}
+		while [ $# -gt 0 ] ; do
+			item=$1
+			name=${item#?}
+			case $item in
+			[OFU]*)
+				# active desktop
+				wm_infos="$wm_infos\\ab\\f4 • \\fr\\ac bspc desktop -f ${name}\\ae"
+			;;
+			o*)
+				# inactive but occupied desktop
+				wm_infos="$wm_infos\\ab\\f2 • \\fr\\ac bspc desktop -f ${name}\\ae"
+			;;
+			f*)
+				# inactive desktop
+				wm_infos="$wm_infos\\ab\\f2 ○ \\fr\\ac bspc desktop -f ${name}\\ae"
+			;;
+			u*)
+				# urgent desktop
+				wm_infos="$wm_infos\\ab\\f3 • \\fr\\ac bspc desktop -f ${name}\\ae"
+			;;
+			L*)
+				# layout
+				case $name in
+				t*)
+					layout=""
+				;;
+				m*)
+					layout=""
+				;;
+				esac
+				wm_infos="$wm_infos \\ab\\f2$layout\\ac bspc desktop -l next\\ae\\f1 \\br⮀"
+			;;
+			esac
+			shift
+		done
+	;;
+	esac
+	printf "%s\n" "$logo $wm_infos $title $sys_infos"
+done
