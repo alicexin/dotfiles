@@ -1,500 +1,451 @@
-mv bspwmbackup bspwm
+sudo modprobe vboxdrv
+netctl-auto
+netctl-auto list
+sudo netctl-auto list
+ls /etc/netctl/
+vim /etc/netctl/wlp2s0-Fish\ Fillet 
+sudo vim /etc/netctl/wlp2s0-Fish\ Fillet 
+sudo wifi-menu
+sudo cp /etc/netctl/wlp2s0-Fish\ Fillet etc/netctl/wlp2s0-wifififififi
+netctl-auto
+systemctl disable netctl-auto
+sudo systemctl disable netctl-auto
+sudo wifi-menu
+sudo systemctl enable netctl-auto
+netctl-auto list
+sudo netctl-auto list
 ls
-cd bspwm/
+netctl-auto
+netctl-auto switch-to wlp2s0-wifififififi
+sudo netctl-auto switch-to wlp2s0-wifififififi
 ls
-cd panel
+dropboxd
+dropboxd
+cd compsci
 ls
-vim profile
-chmod +x profile
-vim panel_colors 
-chmod +x panel_colors 
+mkdir cs188
 ls
+cd cs188
+ls
+mkdir p0
+cd p0/
+ls
+ls
+unzip python_basics.zip 
+cd python_basics
+python
+python3
+ls
+vim listcomp2.py 
+vim quickSort.py 
+vim quickSort.py 
 cd ../
+unzip tutorial.zip 
 ls
-cd ../
+cd tutorial
+ls
+vim addition.py 
+python autograder.py -q q1
+python autograder.py
+ls
+vim buyLotsOfFruit.py
+python autograder.py -q q2
+ls
+vim shopSmart.py
+ls
+vim shop.py
+vim shopSmart.py
+python autograder.py -q q3
+vim shopSmart.py
+python autograder.py -q q3
+vim shopSmart.py
+python autograder.py -q q3
+netctl-auto
+visudo /etc/modules-load.d/virtualbox.conf
+sudo vim /etc/modules-load.d/virtualbox.conf
+pacman -Syu
+sudo pacman -Syu
+ssh cs162-bh@torus.cs.berkeley.edu
+sudo aura -Ayu
+pacman-db-upgrade 
+sudo pacman-db-upgrade 
+sudo aura -Ayu
+sudo modprobe vboxdrv
+ls -al ~/.ssh
+ssh-keygen -t rsa -C "alicesheng@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+sudo pacman -Ss xclip
+sudo pacman -S xclip
+sudo pacman -S vagrant
+xclip -sel clip < ~/.ssh/id_rsa.pub
+ssh -T git@github.com
+eval "$(ssh-agent -s)"
+vagrant init cs162/spring2015
+ls
+vim texput.
+vim texput.dvi 
+rm texput.*
+ls
+rm cs168proj3.ova 
+ls
+rm dv_router.py 
+rm grubx64.efi 
+rm grubx64.efi 
+ls
+ls shazam/
+rm -r shazam/
+LS
+ls
+rm eecs70.ova 
+ls
+ls scripts/
+ls
+rm -r scripts/
+ls
+ls abs/
+rm -r abs
+ls
+ls bootoptions/
+ls sxhkd/
+mv sxhkd/ Downloads/
+rm sxhkd/
+rm -r sxhkd/
+ls
+ls usr/
+ls usr/share/
+ls usr/share/icons/
+rm -r usr
+ls
+vagrant up
+modprobe vboxdrv
+modprobe vboxnetadp
+modprobe vboxnetflt
+modprobe vboxpci
+vagrant up
+sudo vim /etc/modules-load.d/virtualbox.conf 
+vboxreload
+sudo vboxreload
+net-tools
+pacman -Ss net-tools
+sudo pacman -S net-tools
+pacman -S virtualbox-host-modules
+sudo pacman -S virtualbox-host-modules
+lsmod
+lsmod | grep vbox
+sudo vboxreload
+sudo pacman -Ss linux-header
+sudo pacman -S linux-headers
+sudo vboxreload
+pacman -S virtualbox
+sudo pacman -Ss virtualbox
+sudo pacman -Syu virtualbox
+sudo pacman -Syu 
+modprobe v
+modprobe vbox
+modprobe vboxdrv
+modprobe 
+vagrant up
+vagrant ssh
+ssh-add .ssh/id_rsa
+ eval "$(ssh-agent -s)"
+ssh-add .ssh/id_rsa
+vagrant ssh
+ls
+vagrant halt
+cd compsci
+ls
+mkdir cs162
+ls
 ls
 cd
-vim .xinitrc
-gparted
-lsblk -f
-gparted
-sudo gparted
-cd ~/.cong
-cd ~/.conf
-cd ~/.config/
+vagrant up
+vagrant ssh
+vagrant halt
+mv Vagrantfile compsci/cs162/
+cd compsci/cs162/
+vim Vagrantfile 
+vagrant up
 ls
-vol
-lsblk
-lsblk -f
-gparted
-sudo gparted
-lsblk -f
-mount /dev/sda4 /mnt
-sudo mount /dev/sda4 /mnt
-nemo &
-~/.config/bspwm/bspwmrc 
-nemo &
-sudo nemo &
-umount /mnt
-sudo umount /mnt
-sudo gparted
-sudo gparted &
-sudo pacman -S ntfsprogs
-~/.config/bspwm/bspwmrc 
-umount -r .
-umount -r /
-sudo umount -r /
-sudo umount -r /mnt
-sudo umount -r /
-wifi-menu
-sudo wifi-menu
-systemctl
-systemctl stop -mount
-systemctl stop -.mount
-systemctl stop "-.mount"
-systemctl stop "-tmp.mount"
-systemctl stop "tmp.mount"
-sudo systemctl stop "tmp.mount"
-sudo systemctl stop "mount"
-ls /tmp
+vagrant destory
+vagrant destroy
+ls
+vagrant up
+vagrant ssh
+ls
+vim Vagrantfile 
+vim Vagrantfile 
+vagrant init
+vagrant ssh
+vagrant destroy
+ls
+rm Vagrantfile 
+vagrant init cs162/spring2015
+vagrant up
+vagrant ssh
+ls
+cd
+cd compsci/cs169
+cd compsci/cs168/
+ls
+cd project3/
+ls
+cd cs168-project3/
+ls
+cd ../
+ls
+cd ../
+ls
+cd project1
+ls
+vim dv_router.py
+vim ~/.vimrc
+vim dv_router.py
+cd compsci/reader/proj1/
+ls
+vim Makefile 
+make
+vim Makefile 
+cd ../
+ls
+vim proj2/Makefile 
+ls
+ls hw1
+ls lab1
+cd ../
+ls
+vim proj1/Makefile 
+ls
+cd reader
+ls
+vim proj1/Makefile 
+ls
+cd proj1
+ls
+ls db61b/
+vim db61b/Makefile 
+vim db61b/Makefile 
+vim db61b/Makefile 
+make
+vim db61b/Makefile 
+make check
+vim db61b/Makefile 
+cd
+ls
+vim Vagrantfile 
+ll
+cd bootoptions/
+ls
+cd ../
+cd myscripts/
+ls
+cd ../
+ls
+vim Vagrantfile 
+cd VirtualBox\ VMs/
+ls
+cd alice_default_1421903583550_44656/
+ls
+cd ../
+cd ../
+ls
+ls
+cd folder
+ls
+cd code
+vim
+ls
+cd
+ls
+vagrant ssh
+vim a.py
+vim a.py
+subl a.py
+vim .config/awesome/rc.lua
+sudo wifi-menu -o
+netctl-auto list
+sudo netctl-auto list
+sudo netctl-auto switch-to qlp2s0-CalVisitor
+sudo netctl-auto switch-to wlp2s0-CalVisitor
+sudo netctl-auto switch-to wlp2s0-CalVisitor
+sudo netctl-auto switch-to wlp2s0-AirBears2
+ls
+cd compsci
+ls
+cd reader/
+ls
+cd proj
+cd proj1
+ls
+vim Makefile 
+ls
+netctl-auto
+sudo netctl-auto switch-to wlp2s0-AirBears2
+wifi-menu -o
+dufo wifi-menu -o
+sudo wifi-menu -o
+sudo wifi-menu -o
+sudo netctl-auto list
+sudo netctl-auto switch-to wlp2s0-THEMELT
+cd Downloads/
+ls
+alsamixer
+sudo pacman -S wine
+sudo pacman -S wine-mono
+sudo pacman -S wine-gecko
+sudo pacman -Ss wine-gecko
+sudo pacman -Ss wine
+sudo pacman -Ss wine_gecko
+sudo pacman -S wine_gecko
+sudo pacman -S samba
+sudo pacman -S lib32-libxml2
+ls -a
+vim .xinitrc 
+export WINEPREFIX=~/.wine
+export WINEARCH=win32
+wine /mnt/setup.exe 
+wine 
+wine word
+wine --help
+wine explorer
+ls .wine
+ls .wine/drive_c/
+ls .wine/drive_c/Program\ Files/
+ls .wine/drive_c/Program\ Files/Microsoft
+ls .wine/drive_c/Program\ Files/Microsoft\ Office/
+ls .wine/drive_c/Program\ Files/Microsoft\ Office/Office14/
+wine winword
+ls .wine/drive_c/windows/system32/
+sudo pacman -Ss playonlinux
+sudo pacman -S playonlinux
+ls .wine
+wine
+wine .wine/drive_c/Program\ Files/Microsoft\ Office/Office14/WINWORD.EXE 
+wine .wine/drive_c/Program\ Files/Microsoft\ Office/Office14/WINWORD.EXE 
+mount Desktop/Microsoft\ Office\ 2010\ Professional\ Plus\ x86/Microsoft\ Office\ 2010\ Professional\ Plus\ x86.iso /mnt
+sudo mount Desktop/Microsoft\ Office\ 2010\ Professional\ Plus\ x86/Microsoft\ Office\ 2010\ Professional\ Plus\ x86.iso /mnt
 ls /mnt
+alsamixer
+rm .wine/
+rm -r .wine/
+wine .wine/drive_c/Program\ Files/Microsoft\ Office/Office14/WINWORD.EXE 
+mount Desktop/Microsoft\ Office\ 2010\ Professional\ Plus\ x86/Microsoft\ Office\ 2010\ Professional\ Plus\ x86.iso /mnt
+sudo mount Desktop/Microsoft\ Office\ 2010\ Professional\ Plus\ x86/Microsoft\ Office\ 2010\ Professional\ Plus\ x86.iso /mnt
+playonlinux
 ls
-systemctl
-sudo systemctl stop dhcpcd
-systemctl
-sudo wifi-menu
-sudo systemctl disable dhcpcd
-sudo systemctl list-unit-files
-sudo systemctl disable "-.mount
+Desktop/Microsoft\ Word\ 2010.desktop 
+Desktop/Microsoft\ Word\ 2010
+ls Desktop/
+Desktop/Microsoft\ Word\ 2010.desktop 
+Desktop/Microsoft\ Word\ 2010.desktop
+playonlinux Desktop/Microsoft\ 
+playonlinux Desktop/Microsoft\ Word\ 2010.desktop 
+playonlinux --help
+playonlinux --run "Microsoft Word 2013"
+playonlinux --run "Microsoft Word 2010"
+alias word="playonlinux --run "Microsoft Word 2010"
 "
-sudo systemctl disable "mount
-"
-sudo systemctl disable mount
-sudo systemctl list-unit-files
-sudo systemctl disable tmp.mount
-sudo systemctl list-unit-files
-systemctl
-systemctl -h
-systemctl
-sudo systemcel restart netctl@wlp2s0\x2dRESCOMP
-sudo systemctl restart netctl@wlp2s0\x2dRESCOMP
-journalctl -xn
-systemctl
-systemctl list-unit-files
-sudo systemctl start netctl
-sudo systemctl start netctl@
-sudo systemctl start netctl-sleep
-sudo systemctl start netctl-
-sudo systemctl start netctl-suto@
-sudo systemctl start netctl-auto@
-sudo systemctl start netctl-ifplugd@
-systemctl list-unit-files
-systemctl
-wifi-menu
-sudo wifi-menu
-~/.config/bspwm/bspwmrc 
-gparted &
-systemctl
-sudo gparted &
-sudo pacman -S ntfsprogs
-sudo gparted &
-sudo pacman -S dosfstools
-sudo pacman -S mtools
-sudo gparted &
-sudo gparted &
-~/.config/bspwm/bspwmrc 
-sudo gparted &
-sudo gparted &
-sudo gparted &
-sudo gparted 
-bs
-bg
-sudo pacman -S hfsprogs
-cd Downloads/
+alias word="playonlinux --run "Microsoft Word 2010""
+alias word="playonlinux --run "Microsoft Word 2010""
+alias word="playonlinux --run 'Microsoft Word 2010'"
+word
+vim .xinitrc 
+source ~/.bashrc
+wine Desktop/KMSpico\ Install/KMSpico_setup.exe 
+ls .wine
+ls .wine/drive_c/
 ls
-tar -xvzf hfsprogs.tar.gz 
-cd hfsprogs
+wine .wine/drive_c/Program\ Files/KMSpico/KMSELDI.exe 
+wine .wine/drive_c/Program\ Files/KMSpico/Service_KMS.exe 
+wine .wine/drive_c/Program\ Files/KMSpico/AutoPico.exe 
+cd compsci/cs188/
 ls
-makepkg -s
-pacman -U hfsprogs-332.25-10-x86_64.pkg.tar.xz 
-sudo pacman -U hfsprogs-332.25-10-x86_64.pkg.tar.xz 
-sudo gparted
-fsck
-sudo gparted
-hsfprogs
-hfsprogs
-ssh cs61b-abk@star.cs.berkeley.edu
-sudo pacman -S ssh
-sudo pacman -S openssh
-ssh cs61b-abk@star.cs.berkeley.edu
-ssh cs61b-abk@cory.eecs.berkeley.edu
-ssh cs61b-abk@cory.eecs.berkeley.edu
-systemctl list-unit-files
-gparted
-sudo gparted
+cd ../
+ls
+cd cs162
+ls
+vagrant up
+ls
+vagrant up
+vagrant ssh
+eval "$(ssh-agent -s)"
+ssh-add <path_to_your_private_key>
+ssh-add ~/.ssh/id_rsa
+vagrant ssh
+vagrant ssh
+ssh-add
+ssh-add
+vagrant ssh
+vagrant halt
+vagrant ssh
+vagrant up
+vagrant ssh
+cd Desktop/
+unzip Office\ 2010\ Activator.zip 
+xkill
+acpi -b
+man acpi
+acpi -b
+acpi -b
+acpi
+acpi
+acpi
+acpi
+cd .config/awesome/rc.lua
+vim .config/awesome/rc.lua
+acpi
+acpi -i
+sudo acpi
+acpi -h
+dmesg
+dmesg | grep acpi
+acpi
+acpi -i
+acpi -d
+acpi -a
+acpi -t
+acpi -c
+acpi -b
+acpi -f
+acpi -k
+acpi -d
+acpi -p
+acpi -h
+upower
+upower -i
+pacman -Ss acpi
+pacman -S acpi
+sudo pacman -S acpi
+acpi
+echo $SHELL
+sudo pacman -S zsh
+zsh
+ls /etc/shells 
+vim /etc/shells
+zsh
+wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+vim .zshrc
+zsh
+vim .zsh
+vim .zshrc
+vim .zshrc
+ls
+zsh
+vim .zshrc
+zsh
+▶ exit
+chsh -s $(which zsh)
 exit
-fsck -h
-lkblk -f
-lsblk -f
-fsck -fv sda1 
-fsck -fv /dev/sda
-sudo fsck -fv /dev/sda
-sudo ntfs.fsck -fv /dev/sda
-gparted
-sudo gparted
-fsck.hfs -fv /dev/sda
-fsck.hfsflus -fv /dev/sda
-pacman -Ss fsck
-systemctl list-unit-files
-systemctl --type=service
-fsck.hfsflus
-fsck
-fsck /dev/sda
-sudo fsck /dev/sda
-gparted
-sudo gparted
-sudo fsck /dev/sda
-sudo fsck -f /dev/sda
-sudo mke2fs -n /dev/sda
-sudo e2fsck -b 32768 /dev/sda
-sudo e2fsck -b 23887872 /dev/sda
-sudo e2fsck -b 8193 /dev/sda
-fdisk -l
-fdisk -1
-fdisk -l
-lsblk
-fdisk -l sda
-fdisk -l /dev
-fdisk -l /dev/sda
-sudo fdisk -l /dev/sda
-sudo fdisk -l
-sudo <span class="skimlinks-unlinked">fsck.ext2</span> -v /dev/sda
-fsck /dev/sda
-sudo fsck /dev/sda
-sudo mke2fs -n /dev/sda
-sudo e2fsck -b 98304 /dev/sda
-sudo e2fsck -b 162840 /dev/sda
-sudo gparted
-lsblk -f
-hfsprogs
-hfsprog
-fsck.hfs
-fsckhfs
-hfs.fsck
-fsck -h
-mkfs -h
-fsck.hfsplus
-fsck.hfsplus -fv /dev/sda
-fsck.hfsplus -f /dev/sda
-sudo fsck.hfsplus -f /dev/sda
-sudo fsck.hfsplus  /dev/sda
-sudo fsck.hfsplus /dev/sda
-sudo fsck.hfsplus /dev/sda1
-vim .xinitrc
-vim .xinitrc
-vim .xinitrc
-ls -a
-vim .bspwm.log 
-man bspwm
-
-vim .bspwm.log 
-man bspwm
-vim .bspwm.log 
-vim .xinitrc
-vim .xinitrc
-vim .bspwm.log 
-vim .xinitrc
-vim .xinitrc
+ulimit
+ulimit -a
+ulimit -u
+exit
+ulimit -a
+exit
+ulimit -a
 ls
-cd Dow
-cd Downloads/
-ls
-cd bspwm
-ls
-cd examples
-ls
-mv bspwmrc ~/.config/bspwm/bspwmrcexample
-cd ~/.config/bspwm/bspwmrcexample
-ls
-cd ~/.config/bspwm
-ls
-mv bspwmrc bspwmrcold
-ls
-mv bspwmrcexample bspwmrc
-ls
-vim bspwmrcold
-vim bspwmrc
-vim bspwmrc
-cd ~/.config/bspwm/bspwmrc
-ls
-cd ~/.config/bspwm
-ls
-vim bspwmrc
-vim ~/.config/bspwm/bspwmrc
-vim ~/.config/bspwm/bspwmrc
-vim ~/.config/bspwm/bspwmrc
-vim ~/.config/bspwm/bspwmrc
-vim ~/.config/bspwm/bspwmrc
-vim ~/.config/bspwm/bspwmrc
-vim ~/.config/bspwm/bspwmrc
-vim ~/.config/bspwm/bspwmrc
-vim .xinitrc 
-vim ~/.config/bspwm/bspwmrc
-vim ~/.config/bspwm/bspwmrc
-vim .xinitrc 
-vim ~/.config/bspwm/bspwmrc
-vim ~/.config/bspwm/bspwmrc
-wifi-menu
-sudo wifi-menu
-sudo wifi-menu
-pacman -Ss fft
-vim ~/.config/bspwm/bspwmrc
-vim ~/.config/bspwm/panel
-man sspwm
-man bspwm
-echo $TERM
-xbindkeys
-xbindkeys_config
-xbindkeys
-xclock
-vim ~/.config/bspwm/panel/panel
-clock
-clock -sf
-clock -s
-man clock
-time.h
-vim ~/.config/bspwm/panel/panel
-clock -sf 'S%a %H:%M'
-clock -sf '%a %H:%M'
-man bar
-man panel
-man dzen2
-man dzen
-clear
-vim ~/.config/bspwm/panel/panel
-vim ~/.config/bspwm/panel/panel
-vim ~/.config/bspwm/panel/panel_bar 
-vim ~/.config/bspwm/panel/panel
-ls -a
-ls ~/.config/bspwm/panel
-ls -a ~/.config/bspwm/panel
-vim -a ~/.config/bspwm/panel profile
-vim ~/.config/bspwm/panel profile
-vim ~/.config/bspwm/panel/profile
-vim ~/.config/bspwm/panel/panel
-vim ~/.config/bspwm/panel/panel_conky 
-vim ~/.config/bspwm/panel/panel_conky 
-vim ~/.config/bspwm/panel/panel_wifi
-iwconfig
-vim ~/.config/bspwm/panel/panel_wifi
-ls ~/.config/bspwm/panel
-
-cd ~/.config/bspwm/panel
-vim panel_battery 
-man clock
-man xtitle
-xtitle
-xtitle -h
-xtitle -help
-xtitle -s
-xtitle 
-xtitle -f
-xtitle -f a
-vim ~/.config/bspwm/panel
-cd Downloads/
-ls
-tar -xvzf aura-bin.tar.gz 
-cd aura-bin
-ls
-makepkg -s
-sudo pacman -U aura-bin-1.2.3.1-1-x86_64.pkg.tar.xz 
-aura -As sublime
-aura -B
-sudo aura -B
-sudo aura -Q
-ls
-*
-echo **
-echo *
-echo au*
-echo p*
-aura -Syu
-sudo aura -Syu
-sudo aura -Syyu
-man pacman
-cd
-ls
-cd Downloads/
-ls
-unzup dotfiles-master.zip
-unzip dotfiles-master.zip
-cd dotfiles-master
-ls
-cd .config/
-ls
-cd bspwm/
-ls
-cd panel
-ls
-mv panel_conky ~/.config/bspwm/panel
-mv panel_battery ~/.config/bspwm/panel
-vim bar.config.h 
-vim bar.config.h 
-vim panel
-ls
-mv panel_wifi ~/.config/bspwm/panel
-cd ~/.config/bspwm/panel
-ls
-vim panel_conky
-cd ~/.config/bspwm/panel
-vim panel_conky
-cd Downloads/
-ls
-cd dotfiles-master
-ls
-ls -a
-vim bootstrap.sh 
-vim .bashrc
-iwconfig
-cd ~/.config/bspwm/panel
-ls
-cd
-cd Downloads/
-ls
-cd dotfiles-master
-ls
-ls -a
-vim .Xresources 
-vim .xinitrc 
-ls scripts/
-vim scripts/reload_bspwm 
-ls scripts/
-ls scripts
-ls -a
-vim .bashrc-prompt 
-vim .fonts
-vim fonts
-ls fonts
-nemo fonts
-sensors
-cd ~/.config/bspwm/bspwmrc
-cd ~/.config/bspwm/panel
-ls
-
-cd
-cd ~/.config/bspwm/panel
-vim panel_battery 
-vim panel_conky
-pkill panel
-panel &
-vim panel_conky
-pkill panel
-panel &
-vim panel_conky
-pkill panel
-panel &
-panel &
-vim panel_conky
-pkill panel
-panel &
-vim panel_conky
-pkill panel
-panel &
-pkill panel
-panel &
-vim panel_conky
-pkill panel
-panel &
-vim panel_conky
-vim panel_conky
-vim panel_conky
-vim panel_conky
-vim panel_conky
-vim panel_conky
-vim panel_conky
-vim panel_conky
-vim panel_conky
-vim panel_conky
-vim panel_conky
-vim panel_conky
-ls
-vim panel_bar
-vim panel
-pkill panel
-panel
-panel &
-panel &
-ls
-vim panel
-sensors
-sensors | grep "temp1"
-amixer get Master -M | grep -oE "[[:digit:]]*%"}
-amixer get Master -M
-amixer get Master -M | grep -oE "[:digit:]*%"}
-amixer get Master -M | grep -oE "[[:digit:]]*%"}
-amixer get Master -M | grep -oE "[[:digit:]]*%"}
-amixer get 'Master',0 | egrep -o '[0-9]{1,3}%'
-amixer get 'Master',0 | grep -o '[0-9]{1,3}%'
-amixer get Master -M | egrep -oE "[[:digit:]]*%"}
-amixer get 'Master',0 | egrep -o '[0-9]{1,3}%'
-amixer get 'Master' -M | egrep -o '[0-9]{1,3}%'
-get Master -M
-amixer get 'Master' -M
-mixer
-amixer get 'Master' 'Mono' -M
-amixer get 'Master' 'Left' -M
-amixer get 'Master' -M
-bash: get: command not found
-[alice@alice-arch ~]$ amixer get 'Master' -M
-Simple mixer control 'Master',0
-  Capabilities: pvolume pswitch pswitch-joined
-  Playback channels: Front Left - Front Right
-  Limits: Playback 0 - 65536
-  Mono:
-  Front Left: Playback 28498 [43%] [on]
-  Front Right: Playback 28498 [43%] [on]
-[alice@alice-arch ~]$ mixer
-bash: mixer: command not found
-[alice@alice-arch ~]$ amixer get 'Master' 'Mono' -M
-Simple mixer control 'Master',0
-  Capabilities: pvolume pswitch pswitch-joined
-  Playback channels: Front Left - Front Right
-  Limits: Playback 0 - 65536
-  Mono:
-  Front Left: Playback 28498 [43%] [on]
-  Front Right: Playback 28498 [43%] [on]
-[alice@alice-arch ~]$ amixer get 'Master' 'Left' -M
-exec amixer -c 0 get Master | grep Mono:
-amixer get 'Master' -M | egrep -o Mono '[0-9]{1,3}%'
-amixer get 'Master Mono' -M | egrep -o '[0-9]{1,3}%'
-amixer get 'Master' 'Mono' -M | egrep -o '[0-9]{1,3}%'
-amixer get 'Master' 'Mono' -M | grep Mono |  egrep -o '[0-9]{1,3}%'
-amixer get 'Master' 'Mono' -M | grep Mono |  egrep -o '[0-9]{1,3}%'
-amixer get 'Master' -M | grep Mono |  egrep -o '[0-9]{1,3}%'
-amixer get 'Master' -M | grep Mono
-amixer get 'Master'| grep Mono |  egrep -o '[0-9]{1,3}%'
-amixer -c 0 get 'Master'| grep Mono |  egrep -o '[0-9]{1,3}%'
-amixer
-amixer -c - get Master
-amixer -c 0 get Master
-amixer -c 0 get Master
-amixer -c 0 get Master
-xbindkeys_config
-amixer get Master
-amixer get Master
-amixer -c 0 get 'Master'| grep Mono |  egrep -o '[0-9]{1,3}%'
-amixer -c 0 get 'Master'| grep Front Left |  egrep -o '[0-9]{1,3}%'
-amixer -c 0 get 'Master'| grep 'Front Left' |  eg
-amixer  get 'Master'| grep 'Front Left' |  egrep -o '[0-9]{1,3}%'
-amixer  get 'Master'| grep 'Front Left' |  egrep -o '[0-9]{1,3}%'
-time
-time
-time
-man strftime
-amixer set Master 0
-systemctl
-wifi-menu
-sudo wifi-menu
-echo $FONT
-sudo wifi-menu
-lsblk -f
+exit
+ulimit -s
+exit
+.
+exit

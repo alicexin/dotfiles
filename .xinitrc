@@ -12,6 +12,12 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
+
+ export PATH=$PATH:/home/alice/.cabal/bin
+
+export WINEPREFIX=~/.wine
+export WINEARCH=win32
+
 #dropboxd
 # exec gnome-session
 # exec startkde
@@ -21,10 +27,13 @@ mkfifo "$PANEL_FIFO"
 xsetroot -cursor_name left_ptr
 xset +fp /usr/share/fonts/local
 xbindkeys
-
-sxhkd & 
+easystroke &
+dropboxd &
+#sxhkd & 
 #~/.config/bspwm/bspwmrc &
-urxvt &
-exec bspwm 
+#urxvt &
+#syndaemon -t -k -i 1 &
+#exec bspwm 
 
-#exec awesome
+source ~/.bashrc
+exec awesome

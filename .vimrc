@@ -38,7 +38,7 @@ syntax enable
 let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme jellybeans
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 
@@ -70,4 +70,19 @@ set ww+=<,>,h,l,[,]
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
+
+
+runtime! ftplugin/man.vim
+
+let g:vim_markdown_folding_disabled=1
+
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
+
+map <Up> gk
+map <Down> gj
+imap <Up> <Esc>gka
+imap <Down> <Esc>gja
+
+
 

@@ -32,7 +32,6 @@ conky -c ./panel_conky > "$PANEL_FIFO" &
 case "$flavor" in
 	bar)
 		cat "$PANEL_FIFO" | panel_bar | bar -g x$PANEL_HEIGHT -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" &
-
 		;;
 	dzen2)
 		FONT_FAMILY='DejaVu Sans'

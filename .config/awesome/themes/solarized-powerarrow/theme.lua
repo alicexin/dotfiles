@@ -23,7 +23,7 @@ green   = "#859900"
 theme                               = {}
 
 theme.confdir                       = os.getenv("HOME") .. "/.config/awesome/themes/solarized-powerarrow"
-theme.wallpaper                     = theme.confdir .. "/wallpapers/zionello.jpg"
+theme.wallpaper                     = os.getenv("HOME") .. "/Dropbox/Wallpapers/umi_bunny.jpg"
 
 theme.font                          = "Tamsyn 8"
 theme.taglist_font                  = "Icons 8"
@@ -104,7 +104,7 @@ theme.arr2                          = theme.confdir .. "/icons/arr2.png"
 theme.arr3                          = theme.confdir .. "/icons/arr3.png"
 
 -- lain related
-theme.useless_gap_width             = 5
+theme.useless_gap_width             = 12
 theme.layout_uselesstile            = theme.confdir .. "/icons/uselesstile.png"
 
 return theme

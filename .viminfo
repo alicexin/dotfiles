@@ -8,98 +8,117 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0/\<bspc\>
+~MSle0~/menuentry
 
 # Last Substitute Search Pattern:
-~MSle0~&34322E
+~MSle0&delta
 
 # Last Substitute String:
-$000000
+$
 
 # Command Line History (newest to oldest):
 :q
-:wq
-:Wq
-:%s/34322E/000000/g
-:s%/34322E/000000/g
-:'<,'>s%/34322E/000000/g
-:'<,'>%s/34322E/000000/g
-:q!
-:Q
 :w
-:vsp dict/Entry.java
-:sp graph/Edge.java
-:vsp graph/Edge.java
-:!javac graph/*.java
-:.
-:!javac graph/WUGraph.java
-:!ls
-:sp graph/VertexPair.java
-:vsp graph/WUGraph.java
-:!ls graph
-:sp graph/WUGraph.java
-:1
-:'<,'>s/^#//
-:'<,'>/s^#//
-:'<,'>/^#//
-:'<,'>
-:'<,'>s/^/#
-:vsp /etc/pommed.conf.pmac
+:wq
+:w hw5.tex
+:vsp hw4.tex
+:sp synch.c
+:q!
+:ww
 :!
-:'<,'>!:q!
-:wq!
-:'<,'>s/^/#/
-:sp graphalg/Kruskal.java
-:! ls graphalg
-:! ls graph
-:! ls
-:colorscheme Tomorrow-Night
+:sp thread.c
+:w hw4.tex
+:set shiftwidth=2
+:set tabstop=2
+:set tabwidth=2
+:vsp hw3.tex
+:sp threads/synch.c
+:sp threads/thread.c
+:sp ../threads/thread.c
+:sp ../threads/synch.c
+:sp ../threads/thread.h
+:sp ../lib/kernel/list.h
+:sp ../threads/interrupt.c
+:sp ../lib/kernel/list.c
+:vsp ../threads/thread.h
+:sp threads/synch.h
+:sp threads/interrupt.h
+:sp devices/timer.h
+:o timer.h
+:sp threads/thread.h
+:vsp threads/thread.c
+:s/hash_map/unordered_map/g
+:w hw3.tex
+:!compton&
+:!pkill compton
+:WQ
+:W
 :'<,'>q
-::q
-:qq
-:sp rc.lua.new
-:!chromium &
-:w!
+:vsp hw2.tex
+:sp hw2.tex
+:w hw2_grades.tex
+:sp process.h
+:sp process.c
+:sp main.c
+:1
+:colorscheme jellybeans
+:colorscheme default
+:colorscheme
+:Q
+:!rm ../cs170_hw_template\ \(1\).tex
+:w hw1.tex
 
 # Search String History (newest to oldest):
-?/font
-? 34322E
-? /34322E/000000/g
-? \<bspc\>
-?/amixer
-?/modkey
-?/Standard
-?/awful.key
-?/Mod
-?/Mod4
-?/update
-?/interval
+?/menuentry
+?/recovery
+?/fallback
+?/dkms
+? @$
+?/waiters
+?/semaphore
+?/cond_signal
+?/yield
+?/signal
+?/sema_up
+?/lock_release
+?/insert_ordered
+?/cond_wait
+?/semaphore_elem
+?/cond_wair
+?/condition
+?/sema_down
+?/thread_set_priority
+?/lock_init
+?/release
+?/acquire
+?/running_thread()
+?/thread_current
+?/thread_get_priority
+?/lock_releas
+?/lock_list
+?/list_init
 ?/remove
-?/Mon
-? \<URxvt\>
-? ^#
-? s^#
-?/jordan
-? ^
-?/xmonad
-? \<\.config\>
-?/awful.rules
-?/gnome
-?/scrollbar
-?/trans
-?/transparent
-?/transpaent
-?/scroll
-? \<z\>
-?/batter
-?/left
-?/nm-applet
-?/clock
-?/clocl
-?/usr/local/MATLAB/MATLAB_Production_Server/R2013a/usr/local/MATLAB/MATLAB_Production_Server/R2013a
-?/terminal
-?/wallpaper
-?/battery
+?/lock_acquire
+?/foreach
+? );
+?/sema
+?/set_
+?/up
+?/ready_list
+?/thread_block
+? \<wait\>
+?/tid_lock
+?/thread_init
+?/init_thread
+?/compare_
+?/next_thread_to_run
+?/next_thread
+?/cur->priority
+?/list pop
+?/list_insert
+?/list
+?/list_push_back
+?/unblock
 
 # Expression History (newest to oldest):
 
@@ -108,1235 +127,1696 @@ $000000
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	296
-<#S ${execi 1 ./panel_wifi} ${wireless_essid wlp2s0} ${alignr} Volume: ${execi 1 amixer  get 'Master'| grep 'Front Left' |  egrep -o '[0-9]{1,3}%'}% ${alignr} Battery: ${execi 60 acpi -b | awk '{print $4}' | cut -b -3}% (${execi 60  acpi -b | awk '{print $5}'}) ${alignr} ${time %D %I:%M:%S %P}
-""1	LINE	0
-	Battery: ${execi 60 acpi -b | awk '{print $4}' | cut -b -3}% (${execi 60  acpi -b | awk '{print $5}'}) 
+""0	LINE	0
+	  list_sort(&ready_list, &compare_priorities, NULL);
+"1	LINE	0
+	  list_sort(&ready_list, &compare_priorities, NULL);
 "2	LINE	0
-	" ============================================================================
-	" Netrw Directory Listing                                        (netrw v151)
-	"   /home/alice/.config/bspwm/panel
-	"   Sorted by      name
-	"   Sort sequence: [\/]$,\<core\%(\.\d\+\)\=\>,\.h$,\.c$,\.cpp$,\~\=\*$,*,\.o$,\.obj$,\.info$,\.swp$,\.bak$,\~$
-	"   Quick Help: <F1>:help  -:go up dir  D:delete  R:rename  s:sort-by  x:special
-	" ==============================================================================
-	../
-	./
-	panel*
-	panel_bar*
-	panel_battery*
-	panel_colors*
-	panel_dzen2*
-	panel_wifi*
-	profile*
-	panel_conky
+	  sema_up (&lock->semaphore);
 "3	LINE	0
-	#S\f8  \f9${execi 1 sensors | grep "temp1" | cut -d'+' -f2 | head -c2}°  \f8${execi 1 ./panel_wifi} \f9${wireless_essid wlan0}   \f8${execi 1 ./panel_battery}${battery_percent}%   \fr${time %I:%M %P}\ur
+	        list_insert_ordered (&sema->waiters, &thread_current ()->elem, &compare_priorities, NULL);
 "4	LINE	0
-	#S  ${execi 1 sensors | grep "temp1" | cut -d'+' -f2 | head -c2}°  ${execi 1 ./panel_wifi} ${wireless_essid wlp2s0}   ${execi 1 ./panel_battery}${battery_percent}%   ${time %I:%M %P}
+	        list_push_back (&sema->waiters, &thread_current ()->elem);
 "5	LINE	0
-	Remaining: ${execi 60 acpi -b | awk '{print$5}'} ${alignr} (${execi 60 acpi -b | awk '{print $4}' | cut -b -3}) 
+	  cur->orig_priority = new_priority;
 "6	LINE	0
-	Remaining: ${execi 60 acpi -b | awk '{print$5}'} ${alignr} (${execi 60 acpi -b | awk '{print $4}' | cut -b -3}) 
-"7	LINE	0
-	" ============================================================================
-	" Netrw Directory Listing                                        (netrw v151)
-	"   /home/alice/.config/bspwm/panel
-	"   Sorted by      name
-	"   Sort sequence: [\/]$,\<core\%(\.\d\+\)\=\>,\.h$,\.c$,\.cpp$,\~\=\*$,*,\.o$,\.obj$,\.info$,\.swp$,\.bak$,\~$
-	"   Quick Help: <F1>:help  -:go up dir  D:delete  R:rename  s:sort-by  x:special
-	" ==============================================================================
-	../
-	./
-	panel*
-	panel_bar*
-	panel_colors*
-	panel_dzen2*
-	profile*
+	  cur->priority = new_priority;
+"7	CHAR	0
+	  struct list_elem *e;
+	  struct list_elem *el;
+	  for (e = list_begin(&cur_thread->lock_list); e != list_end(&cur_thread->lock_list); e = list_next(e)) {
+	     struct lock *l = list_entry (e, struct lock, lock_elem);
+	     struct list *wait= &(&l->semaphore)->waiters;
+	     for (el = list_begin(wait); el != list_end(wait); el = list_next(el)) {
+	         struct thread *t = list_entry (el, struct thread, elem);
+	         if (t->priority > cur_thread->priority) {
+	             cur_thread->priority = t->priority;
+	         }
+	     }
+	  }
+	
 "8	LINE	0
-	# Rules
+	  intr_set_level(old_level);
 "9	LINE	0
-	
-	bspc rule -a Chromium desktop=^2
-	bspc rule -a Screenkey manage=off
-	
+	    thread_current ()->priority = new_priority;
+"v	CHAR	0
+	 
+"y	LINE	0
 	
 "-	CHAR	0
-	ome/jordan/.xmonad/.conky_dzen | dzen2 -x '500' -w '1420' -h '14' -ta 'r' -fg $foreground -bg $background -y '0' -fn $font
+	\
 
 # File marks:
-'0  1  0  ~/.gitignore
-'1  34  100  ~/.config/bspwm/panel/panel
-'2  61  0  ~/.config/bspwm/panel/panel_bar
-'3  35  0  ~/.config/bspwm/panel/panel
-'4  38  25  ~/.config/bspwm/panel/panel
-'5  1  0  ~/.xinitrc
-'6  143  90  ~/.Xdefaults
-'7  115  26  ~/.Xdefaults
-'8  36  0  /usr/share/fonts/75dpi/fonts.alias
-'9  26  0  /usr/share/fonts/100dpi/fonts.alias
+'0  950  0  ~/pacman.txt
+'1  316  0  /mnt/EFI/BOOT/refind.conf
+'2  141  9  /mnt/EFI/BOOT/refind.conf
+'3  667  0  ~/.config/awesome/rc.lua
+'4  104  0  /var/log/Xorg.0.log
+'5  1  0  /var/log/faillog
+'6  4767  120  /var/log/pacman.log
+'7  10  0  /etc/modules-load.d
+'8  4979  5  /var/log/pacman.log
+'9  228  42  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
 
 # Jumplist (newest first):
--'  1  0  ~/.gitignore
--'  34  100  ~/.config/bspwm/panel/panel
--'  1  0  ~/.config/bspwm/panel/panel
--'  61  0  ~/.config/bspwm/panel/panel_bar
--'  1  0  ~/.config/bspwm/panel/panel_bar
--'  35  0  ~/.config/bspwm/panel/panel
--'  38  25  ~/.config/bspwm/panel/panel
--'  1  0  ~/.xinitrc
--'  143  90  ~/.Xdefaults
--'  1  0  ~/.Xdefaults
--'  115  26  ~/.Xdefaults
--'  36  0  /usr/share/fonts/75dpi/fonts.alias
--'  1  0  /usr/share/fonts/75dpi/fonts.alias
--'  26  0  /usr/share/fonts/100dpi/fonts.alias
--'  1  0  /usr/share/fonts/100dpi/fonts.alias
--'  17  0  ~/.config/bspwm/panel/panel
--'  9  0  ~/.config/bspwm/panel/panel_colors
--'  1  0  ~/.config/bspwm/panel/panel_colors
--'  20  0  ~/.config/bspwm/panel/panel_colors
--'  37  0  ~/.config/bspwm/panel/panel
--'  21  12  ~/.config/bspwm/panel/panel
--'  22  11  ~/.config/bspwm/panel/panel
--'  11  190  ~/.config/bspwm/panel/panel_conky
--'  1  0  ~/.config/bspwm/panel/panel_conky
--'  40  0  ~/.conkyrc
--'  1  0  ~/.conkyrc
--'  54  18  ~/.conkyrc
--'  12  48  ~/.config/bspwm/panel/panel_conky
--'  44  0  ~/.config/bspwm/panel/panel
--'  7  27  ~/.config/bspwm/panel/panel_conky
--'  10  0  ~/.config/bspwm/panel/panel_conky
--'  16  0  ~/.config/bspwm/panel/panel_battery
--'  1  0  ~/.config/bspwm/panel/panel_battery
--'  154  0  ~/Downloads/dotfiles-master/.bashrc-prompt
--'  1  0  ~/Downloads/dotfiles-master/.bashrc-prompt
--'  1  0  ~/Downloads/dotfiles-master/scripts/reload_bspwm
--'  1  0  ~/Downloads/dotfiles-master/.xinitrc
--'  70  0  ~/Downloads/dotfiles-master/.Xresources
--'  1  0  ~/Downloads/dotfiles-master/.Xresources
--'  13  11  ~/.config/bspwm/panel/panel_wifi
--'  1  0  ~/.config/bspwm/panel/panel_wifi
--'  16  129  ~/.config/bspwm/panel/panel_conky
--'  66  0  ~/.config/bspwm/panel/panel_battery
--'  1  0  ~/panel_bat
--'  7  19  ~/.config/bspwm/panel/panel_wifi
--'  17  0  ~/.config/bspwm/panel/panel_wifi
--'  29  219  ~/Downloads/dotfiles-master/.config/bspwm/panel/panel
--'  1  0  ~/Downloads/dotfiles-master/.config/bspwm/panel/panel
--'  2  11  ~/.config/bspwm/panel/profile
--'  1  0  ~/.config/bspwm/panel/profile
--'  40  0  ~/Downloads/dotfiles-master/.config/bspwm/panel/bar.config.h
--'  1  0  ~/Downloads/dotfiles-master/.config/bspwm/panel/bar.config.h
--'  10  0  ~/.config/bspwm/panel/panel
--'  28  23  ~/.config/bspwm/panel/panel
--'  19  0  ~/.config/bspwm/panel/panel
--'  17  0  ~/.config/bspwm/bspwmrc
--'  1  0  ~/.config/bspwm/bspwmrc
--'  13  0  ~/.config/bspwm/bspwmrc
--'  12  0  ~/.config/bspwm/bspwmrc
--'  14  0  ~/.config/bspwm/bspwmrc
--'  26  0  ~/.xinitrc
--'  21  0  ~/.config/bspwm/bspwmrc
--'  16  0  ~/.config/bspwm/bspwmrc
--'  27  0  ~/.config/bspwm/bspwmrc
--'  25  0  ~/.config/bspwm/bspwmrc
--'  1  0  ~/.config/bspwm/bspwmrcold
--'  28  29  ~/.xinitrc
--'  1  0  ~/.bspwm.log
--'  30  0  ~/.xinitrc
--'  23  8  ~/.xinitrc
--'  25  0  ~/.xinitrc
--'  1  0  ~/Downloads/bspwm/examples/overlapping_borders/bspwmrc
--'  1  0  ~/Downloads/bspwm/examples/loop/xinitrc
--'  1  0  ~/Downloads/bspwm/examples/loop/wm
--'  1  0  ~/Downloads/bspwm/examples/loop/sxhkdrc
--'  1  0  ~/Downloads/bspwm/examples/loop/profile
--'  1  0  ~/Downloads/bspwm/examples/loop/bspwmrc
--'  13  0  ~/Downloads/bspwm/examples/external_rules/lua/README.asciidoc
--'  1  0  ~/Downloads/bspwm/examples/external_rules/lua/README.asciidoc
--'  1  0  ~/Downloads/bspwm/examples/external_rules/lua/external_rules
--'  1  0  ~/Downloads/bspwm/examples/external_rules/lua/bspwmrc
--'  1  0  ~/Downloads/bspwm/examples/external_rules/external_rules
--'  1  0  ~/Downloads/bspwm/examples/external_rules/bspwmrc
--'  1  0  ~/Downloads/bspwm/examples/bspwmrc
--'  1  0  ~/Downloads/bspwm/examples/bspwmec
--'  66  5  /usr/bin/bspwm-session
--'  1  0  /usr/bin/bspwm-session
--'  1  0  /usr/share/xsessions/bspwm.desktop
--'  13  0  ~/.xinitrc
--'  16  0  ~/.bashrc
--'  1  0  ~/.bashrc
--'  1  0  ~/.bash_profile
--'  1  0  /etc/fstab
--'  1  0  /etc/netctl/examples/ethernet-dhcp
--'  1  0  /etc/netctl/examples
--'  1  0  /etc/netctl/examples/ethernet-custom
--'  68  20  ~/.xbindkeysrc
--'  1  0  ~/.xbindkeysrc
+-'  950  0  ~/pacman.txt
+-'  332  0  ~/pacman.txt
+-'  1  0  ~/pacman.txt
+-'  316  0  /mnt/EFI/BOOT/refind.conf
+-'  1  0  /mnt/EFI/BOOT/refind.conf
+-'  141  9  /mnt/EFI/BOOT/refind.conf
+-'  247  54  /mnt/EFI/BOOT/refind.conf
+-'  162  9  /mnt/EFI/BOOT/refind.conf
+-'  153  33  /mnt/EFI/BOOT/refind.conf
+-'  143  44  /mnt/EFI/BOOT/refind.conf
+-'  142  43  /mnt/EFI/BOOT/refind.conf
+-'  667  0  ~/.config/awesome/rc.lua
+-'  1  0  ~/.config/awesome/rc.lua
+-'  104  0  /var/log/Xorg.0.log
+-'  1  0  /var/log/Xorg.0.log
+-'  1  0  /var/log/faillog
+-'  4767  120  /var/log/pacman.log
+-'  4964  51  /var/log/pacman.log
+-'  4966  62  /var/log/pacman.log
+-'  4970  79  /var/log/pacman.log
+-'  4971  98  /var/log/pacman.log
+-'  4987  59  /var/log/pacman.log
+-'  4821  62  /var/log/pacman.log
+-'  5004  49  /var/log/pacman.log
+-'  5015  46  /var/log/pacman.log
+-'  5035  81  /var/log/pacman.log
+-'  5037  48  /var/log/pacman.log
+-'  5040  62  /var/log/pacman.log
+-'  5049  120  /var/log/pacman.log
+-'  5094  59  /var/log/pacman.log
+-'  5051  0  /var/log/pacman.log
+-'  1  0  /var/log/pacman.log
+-'  669  0  ~/.config/awesome/rc.lua
+-'  10  0  /etc/modules-load.d
+-'  1  0  /etc/modules-load.d
+-'  4979  5  /var/log/pacman.log
+-'  2  0  /var/log/pacman.log
+-'  228  42  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  226  19  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  125  55  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  124  21  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  123  26  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  77  38  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  75  31  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  53  20  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  1  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  1  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.c
+-'  1  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.
+-'  1  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/build/threads/thread.c
+-'  3  0  ~/Dropbox/compsci/cs170/cs170_hw_template.tex
+-'  1  0  ~/Dropbox/compsci/cs170/cs170_hw_template.tex
+-'  17  0  /etc/modules-load.d
+-'  1  0  ~/Downloads/broadcom-wl/install
+-'  351  63  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  49  6  ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-condvar.c
+-'  1  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-condvar.c
+-'  379  2  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  53  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-condvar.c
+-'  390  62  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  121  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.h
+-'  84  25  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.h
+-'  81  3  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.h
+-'  108  11  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.h
+-'  1  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.h
+-'  400  58  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  32  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  42  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-condvar.c
+-'  399  4  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  4  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  334  2  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.c
+-'  236  54  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.c
+-'  213  11  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.c
+-'  143  9  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.c
+-'  56  63  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.c
+-'  405  5  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  387  24  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  383  17  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  350  51  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  345  44  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  344  53  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  335  23  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  334  31  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  129  21  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  296  2  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  295  3  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  116  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  294  2  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  166  6  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  150  6  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  135  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  45  2  ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-donate-sema.c
+-'  79  2  ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-donate-sema.c
+-'  46  18  ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-donate-sema.c
+-'  1  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-donate-sema.c
+-'  55  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-donate-sema.c
+-'  376  9  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  377  2  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  281  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+-'  365  5  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
 
 # History of marks within files (newest to oldest):
 
-> ~/.gitignore
-	"	1	0
+> ~/pacman.txt
+	"	950	0
 
-> ~/.config/bspwm/panel/panel
-	"	34	100
-	^	34	101
-	.	34	101
-	+	53	83
-	+	47	39
-	+	48	0
-	+	46	12
-	+	1	0
-	+	15	58
-	+	2	0
-	+	4	15
-	+	2	0
-	+	5	0
-	+	21	0
-	+	22	0
-	+	23	0
-	+	27	0
-	+	24	0
-	+	27	0
-	+	24	0
-	+	28	0
-	+	22	0
-	+	26	0
-	+	22	12
-	+	38	25
-	+	34	53
-	+	38	25
-	+	35	0
-	+	34	101
-
-> ~/.config/awesome/themes/solarized-powerarrow/theme.lua
-	"	28	6
-
-> ~/.config/bspwm/panel/panel_bar
-	"	61	0
-	.	1	0
-	+	1	0
-
-> ~/.xinitrc
-	"	1	0
-	^	26	1
-	.	26	0
-	+	15	0
-	+	19	6
-	+	12	2
-	+	13	0
-	+	19	0
-	+	19	41
-	+	20	0
-	+	22	8
-	+	27	10
-	+	32	0
-	+	27	6
-	+	29	11
-	+	29	0
-	+	27	0
-	+	29	0
-	+	28	0
-	+	27	0
-	+	29	0
-	+	20	0
-	+	27	0
-	+	21	29
-	+	22	31
-	+	27	0
-	+	27	0
-	+	28	0
-	+	29	0
-	+	31	11
-	+	27	0
-	+	27	0
-	+	28	0
-	+	29	0
-	+	31	0
-	+	27	0
-	+	27	0
-	+	27	0
-	+	28	0
-	+	29	0
-	+	31	0
-	+	23	8
-	+	29	11
-	+	28	25
-	+	29	0
-	+	28	0
-	+	27	0
-	+	25	0
-	+	27	0
-	+	23	8
-	+	27	0
-	+	29	0
-	+	29	0
-	+	26	0
-	+	28	37
-	+	26	0
-	+	28	29
-	+	26	0
-	+	28	10
-	+	26	0
-
-> ~/.Xdefaults
-	"	143	90
-	^	62	1
-	.	62	0
-	+	186	30
-	+	180	21
-	+	186	0
-	+	174	24
-	+	186	30
-	+	180	21
-	+	174	24
-	+	63	22
-	+	177	18
-	+	127	26
-	+	63	0
-	+	61	0
-	+	1	0
-	+	61	0
-	+	35	0
-	+	33	0
-	+	32	0
-	+	1	0
-	+	35	0
-	+	36	0
-	+	39	0
-	+	40	0
-	+	43	1
-	+	46	1
-	+	50	1
-	+	54	1
-	+	58	1
-	+	64	0
-	+	61	0
-	+	62	0
-	+	63	0
-	+	136	22
-	+	137	0
-	+	136	37
-	+	62	0
-
-> /usr/share/fonts/75dpi/fonts.alias
-	"	36	0
-
-> /usr/share/fonts/100dpi/fonts.alias
-	"	26	0
-
-> ~/.config/bspwm/panel/panel_colors
-	"	9	0
-	^	23	7
-	.	2	0
-	+	6	29
-	+	4	34
-	+	1	0
-	+	1	0
-	+	2	0
-	+	23	5
-	+	20	25
-	+	23	12
-	+	2	0
-
-> ~/.config/bspwm/panel/panel_conky
-	"	11	190
-	^	11	258
-	.	12	0
-	+	16	1
-	+	10	115
-	+	9	4
-	+	10	0
-	+	10	0
-	+	10	0
-	+	15	0
-	+	12	0
-	+	10	0
-	+	12	117
-	+	15	0
-	+	12	116
-	+	12	116
-	+	12	228
-	+	15	0
-	+	12	159
-	+	12	3
-	+	12	162
-	+	16	0
-	+	12	120
-	+	12	1
-	+	12	121
-	+	15	0
-	+	12	171
-	+	12	51
-	+	12	51
-	+	12	51
-	+	12	106
-	+	12	116
-	+	12	0
-	+	12	0
-	+	12	136
-	+	12	69
-	+	12	70
-	+	15	0
-	+	12	145
-	+	12	229
-	+	6	16
-	+	7	27
-	+	12	279
-	+	12	0
-	+	11	0
-	+	13	0
-	+	11	0
-	+	11	157
-	+	11	327
-	+	11	224
-	+	11	157
-	+	11	224
-	+	11	200
-	+	12	0
-	+	11	191
-	+	12	0
-	+	11	257
-	+	12	0
-
-> ~/.conkyrc
-	"	40	0
-	.	26	0
-	+	61	0
-	+	61	0
-	+	60	34
-	+	61	11
-	+	60	34
-	+	61	12
-	+	61	42
-	+	58	10
-	+	61	0
-	+	46	16
-	+	61	13
-	+	40	7
-	+	58	10
-	+	40	7
-	+	41	15
-	+	39	7
-	+	40	7
-	+	26	22
-	+	40	7
-	+	75	30
-	+	26	0
-	+	80	0
-	+	81	0
-	+	80	0
-	+	81	0
-	+	26	0
-
-> ~/.config/bspwm/panel/panel_battery
-	"	16	0
-	^	16	1
-	.	16	0
-	+	6	0
-	+	7	0
-	+	10	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	14	0
-	+	15	0
-	+	16	0
-
-> ~/Downloads/dotfiles-master/.fonts
-	"	1	0
-
-> ~/Downloads/dotfiles-master/.bashrc-prompt
-	"	154	0
-
-> ~/Downloads/dotfiles-master/scripts/reload_bspwm
-	"	1	0
-
-> ~/Downloads/dotfiles-master/.xinitrc
-	"	1	0
-
-> ~/Downloads/dotfiles-master/.Xresources
-	"	70	0
-
-> ~/.config/bspwm/panel/panel_wifi
-	"	13	11
-	^	7	20
-	.	7	19
-	+	6	20
-	+	7	19
-	+	6	20
-	+	7	19
-
-> ~/Downloads/dotfiles-master/.bashrc
-	"	16	0
-
-> ~/Downloads/dotfiles-master/bootstrap.sh
-	"	1	0
-
-> ~/panel_bat
-	"	1	0
-
-> ~/Downloads/dotfiles-master/.config/bspwm/panel/panel
-	"	29	219
-
-> ~/.config/bspwm/panel/profile
-	"	2	11
-
-> ~/Downloads/dotfiles-master/.config/bspwm/panel/bar.config.h
-	"	1	0
-
-> ~/.config/bspwm/bspwmrc
-	"	17	0
-	^	13	0
-	.	13	0
-	+	1	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	1	0
-	+	55	0
-	+	55	0
-	+	1	0
-	+	50	0
-	+	55	0
-	+	57	0
-	+	58	10
-	+	45	37
-	+	58	0
-	+	60	0
-	+	58	0
-	+	9	28
-	+	43	0
-	+	27	32
-	+	27	33
-	+	32	39
-	+	35	38
-	+	41	0
-	+	35	39
-	+	43	40
-	+	45	29
-	+	43	35
-	+	45	0
-	+	47	33
-	+	45	0
-	+	47	0
-	+	4	45
-	+	43	12
-	+	27	0
-	+	27	0
-	+	27	0
-	+	6	0
-	+	8	35
-	+	6	31
-	+	27	0
-	+	27	0
-	+	27	0
-	+	27	0
-	+	11	0
-	+	21	0
-	+	20	0
-	+	19	0
-	+	18	0
-	+	17	0
-	+	16	0
-	+	15	0
-	+	14	0
-	+	13	0
-	+	12	0
-	+	11	0
-	+	27	0
-	+	25	0
-	+	23	0
-	+	28	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	12	0
-	+	14	0
-	+	15	0
-	+	16	0
-	+	17	0
-	+	18	0
-	+	19	0
-	+	20	0
-	+	21	0
-	+	12	0
-	+	13	0
-	+	12	0
-	+	11	0
-	+	10	0
-	+	20	0
-	+	21	0
-	+	19	0
-	+	18	0
-	+	17	0
-	+	16	0
-	+	14	41
-	+	15	0
-	+	14	0
-	+	11	0
-	+	12	0
-	+	14	0
-	+	15	0
-	+	16	0
-	+	17	0
-	+	19	0
-	+	18	0
-	+	20	0
-	+	21	0
-	+	12	0
-	+	13	0
-	+	12	0
-	+	13	0
-
-> ~/.config/bspwm/bspwmrcold
-	"	1	0
-
-> ~/.bspwm.log
-	"	1	0
-
-> ~/Downloads/bspwm/examples/overlapping_borders/bspwmrc
-	"	1	0
-
-> ~/Downloads/bspwm/examples/loop/xinitrc
-	"	1	0
-
-> ~/Downloads/bspwm/examples/loop/wm
-	"	1	0
-
-> ~/Downloads/bspwm/examples/loop/sxhkdrc
-	"	1	0
-
-> ~/Downloads/bspwm/examples/loop/profile
-	"	1	0
-
-> ~/Downloads/bspwm/examples/loop/bspwmrc
-	"	1	0
-
-> ~/Downloads/bspwm/examples/external_rules/lua/README.asciidoc
-	"	13	0
-
-> ~/Downloads/bspwm/examples/external_rules/lua/external_rules
-	"	1	0
-
-> ~/Downloads/bspwm/examples/external_rules/lua/bspwmrc
-	"	1	0
-
-> ~/Downloads/bspwm/examples/external_rules/external_rules
-	"	1	0
-
-> ~/Downloads/bspwm/examples/external_rules/bspwmrc
-	"	1	0
-
-> ~/Downloads/bspwm/examples/bspwmrc
-	"	1	0
-
-> ~/Downloads/bspwm/examples/bspwmec
-	"	1	0
-
-> /usr/bin/bspwm-session
-	"	66	5
-	^	66	6
-	.	54	52
-	+	61	0
-	+	62	0
-	+	61	0
-	+	54	53
-	+	63	0
-	+	54	52
-
-> /usr/share/xsessions/bspwm.desktop
-	"	1	0
-	^	4	66
-	.	1	0
-	+	1	0
-	+	3	9
-	+	5	12
-	+	6	9
-	+	4	65
-	+	1	0
-
-> ~/.bashrc
-	"	16	0
-	^	16	1
-	.	16	1
-	+	20	0
-	+	11	0
-	+	16	1
-
-> ~/.bash_profile
-	"	1	0
-	^	8	1
-	.	8	0
-	+	7	0
-	+	8	0
-
-> /etc/fstab
-	"	1	0
-
-> /etc/netctl/examples/ethernet-dhcp
-	"	1	0
-
-> /etc/netctl/examples/ethernet-custom
-	"	1	0
-
-> ~/.xbindkeysrc
-	"	68	20
-	^	71	25
-	.	71	24
-	+	64	0
-	+	60	0
-	+	52	0
-	+	58	0
-	+	54	21
-	+	53	18
-	+	57	23
-	+	66	24
-	+	71	24
-
-> ~/.config/awesome/rc.lua.solarized
-	"	492	26
-
-> ~/.config/awesome/rc.lua.new
-	"	470	70
-	^	142	83
-	.	142	82
-	+	285	0
-	+	286	0
-	+	287	0
-	+	290	0
-	+	291	0
-	+	292	0
-	+	293	0
-	+	294	0
-	+	295	0
-	+	296	0
-	+	297	0
-	+	298	0
-	+	299	0
-	+	300	0
-	+	301	0
-	+	302	0
-	+	303	0
-	+	304	0
-	+	305	0
-	+	306	0
-	+	307	0
-	+	308	0
-	+	309	0
-	+	310	0
-	+	311	0
-	+	313	0
-	+	314	0
-	+	315	0
-	+	316	0
-	+	317	0
-	+	318	0
-	+	319	0
-	+	316	1
-	+	314	1
-	+	317	1
-	+	320	0
-	+	321	0
-	+	322	0
-	+	323	0
-	+	324	26
-	+	325	0
-	+	327	1
-	+	328	0
-	+	331	0
-	+	334	0
-	+	336	0
-	+	338	22
-	+	339	21
-	+	343	0
-	+	366	1
-	+	344	22
-	+	345	0
-	+	367	0
-	+	366	0
-	+	369	0
-	+	369	2
-	+	369	0
-	+	369	62
-	+	372	7
-	+	370	0
-	+	371	0
-	+	372	0
-	+	373	0
-	+	375	0
-	+	376	0
-	+	400	28
-	+	400	0
-	+	46	25
-	+	48	41
-	+	49	6
-	+	120	0
-	+	121	0
-	+	119	22
-	+	120	1
-	+	20	0
-	+	110	84
-	+	110	0
-	+	111	149
-	+	111	84
-	+	113	0
-	+	111	5
-	+	117	1
-	+	118	1
-	+	119	1
-	+	120	1
-	+	121	1
-	+	23	2
-	+	126	1
-	+	112	0
-	+	112	22
-	+	112	165
-	+	113	0
-	+	112	26
-	+	372	8
-	+	141	0
-	+	139	1
-	+	140	0
-	+	142	59
-	+	138	12
-	+	142	82
-	a	111	0
-	y	111	0
+> /mnt/EFI/BOOT/refind.conf
+	"	316	0
+	^	316	1
 
 > ~/.config/awesome/rc.lua
-	"	460	93
-	^	460	94
-	.	458	0
-	+	124	0
-	+	15	0
-	+	14	0
-	+	457	0
-	+	460	0
-	+	457	0
-	+	457	0
-	+	457	0
-	+	456	24
-	+	42	0
-	+	41	1
-	+	456	43
-	+	42	45
-	+	457	0
-	+	45	0
-	+	54	0
-	+	43	2
-	+	343	4
-	+	627	24
-	+	345	4
-	+	627	1
-	+	181	18
-	+	125	0
-	+	127	23
-	+	129	0
-	+	127	0
+	"	667	0
+	^	667	0
+	.	667	0
+	+	263	47
+	+	269	0
+	+	264	33
+	+	266	12
+	+	264	0
+	+	266	32
+	+	263	18
+	+	264	35
+	+	264	10
+	+	266	42
+	+	267	28
+	+	387	0
+	+	392	0
+	+	399	0
+	+	395	0
+	+	398	5
+	+	399	5
+	+	400	5
+	+	388	5
+	+	389	5
+	+	390	5
+	+	391	5
+	+	447	28
+	+	263	44
+	+	268	0
+	+	267	5
+	+	266	5
+	+	264	2
+	+	263	14
+	+	264	31
+	+	264	14
+	+	265	0
+	+	265	0
+	+	264	10
+	+	265	24
+	+	183	0
+	+	265	5
+	+	264	2
+	+	263	16
+	+	264	0
+	+	263	19
+	+	264	35
+	+	265	4
+	+	266	4
+	+	267	4
+	+	265	0
+	+	268	0
+	+	264	48
+	+	264	0
+	+	264	0
+	+	264	0
+	+	267	14
+	+	202	0
+	+	266	1
+	+	264	92
+	+	266	0
+	+	267	1
+	+	264	0
+	+	267	0
+	+	8	30
+	+	9	0
+	+	18	0
+	+	17	5
+	+	18	33
+	+	32	26
+	+	451	0
+	+	448	0
+	+	449	18
+	+	451	83
+	+	589	4
+	+	590	4
+	+	589	32
+	+	590	33
+	+	589	5
+	+	590	5
+	+	484	38
+	+	479	34
+	+	478	34
+	+	667	0
+	+	84	5
+	+	85	5
+	+	101	23
+	+	79	6
+	+	20	29
+	+	75	26
+	+	101	23
+	+	75	27
+	+	20	13
+	+	20	0
+	+	75	0
+	+	101	0
+	+	74	27
+	+	101	130
+	+	100	68
+	+	101	120
+	+	74	5
+	+	101	23
+	+	74	4
+	+	500	35
+	+	667	0
+
+> /var/log/Xorg.0.log
+	"	104	0
+
+> /var/log/pacman.log
+	"	4767	120
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+	"	228	42
+	^	400	19
+	.	400	19
+	+	294	76
+	+	294	8
+	+	294	65
+	+	294	2
+	+	294	48
+	+	294	48
+	+	237	18
+	+	294	62
+	+	294	5
+	+	294	1
+	+	294	0
+	+	294	5
+	+	293	0
+	+	294	2
+	+	228	0
+	+	294	30
+	+	294	2
+	+	294	5
+	+	294	5
+	+	294	5
+	+	294	8
+	+	294	8
+	+	294	8
+	+	294	12
+	+	294	12
+	+	294	16
+	+	294	12
+	+	294	8
+	+	294	5
+	+	294	4
+	+	294	4
+	+	294	4
+	+	294	4
+	+	294	7
+	+	294	7
+	+	294	7
+	+	294	7
+	+	294	73
+	+	294	11
+	+	294	11
+	+	294	15
+	+	294	2
+	+	294	11
+	+	294	15
+	+	294	11
+	+	78	19
+	+	79	93
+	+	79	7
+	+	53	20
+	+	192	17
+	+	53	10
+	+	79	0
+	+	76	14
+	+	79	0
+	+	76	7
+	+	76	14
+	+	78	66
+	+	78	0
+	+	192	2
+	+	299	4
+	+	295	0
+	+	295	0
+	+	301	0
+	+	300	46
+	+	313	0
+	+	294	16
+	+	74	10
+	+	78	0
+	+	75	0
+	+	76	0
+	+	77	0
+	+	76	7
+	+	78	7
+	+	125	4
+	+	124	14
+	+	36	19
+	+	123	36
+	+	125	88
 	+	126	0
-	+	129	1
-	+	127	24
-	+	127	1
-	+	126	1
-	+	125	1
-	+	120	0
-	+	119	3
-	+	120	0
-	+	54	17
-	+	119	1
-	+	125	0
-	+	126	29
-	+	127	0
-	+	127	23
+	+	375	3
+	+	376	0
+	+	375	2
+	+	401	0
+	+	398	5
+	+	341	1
+	+	375	3
+	+	376	78
+	+	338	0
+	+	295	2
+	+	376	3
+	+	77	9
+	+	75	8
+	+	294	0
+	+	296	0
+	+	295	3
+	+	130	16
+	+	129	19
+	+	130	3
+	+	129	20
+	+	400	19
+	n	158	6
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.c
+	"	1	0
+	.	334	0
+	+	251	4
+	+	251	4
+	+	251	4
+	+	251	5
+	+	251	5
+	+	251	5
+	+	250	4
+	+	359	5
+	+	359	5
+	+	360	5
+	+	360	9
+	+	365	9
+	+	367	12
+	+	368	9
+	+	370	5
+	+	250	5
+	+	357	0
+	+	359	4
+	+	359	4
+	+	360	4
+	+	360	8
+	+	360	8
+	+	365	8
+	+	367	11
+	+	368	8
+	+	370	4
+	+	250	5
+	+	360	0
+	+	250	5
+	+	250	0
+	+	251	42
+	+	251	31
+	+	251	44
+	+	365	48
+	+	359	0
+	+	264	0
+	+	251	4
+	+	251	4
+	+	251	4
+	+	251	5
+	+	251	5
+	+	251	5
+	+	251	4
+	+	251	4
+	+	251	4
+	+	251	65
+	+	251	27
+	+	251	27
+	+	251	33
+	+	251	0
+	+	251	0
+	+	207	0
+	+	252	0
+	+	207	21
+	+	209	0
+	+	209	8
+	+	250	0
+	+	331	0
+	+	25	0
+	+	171	0
+	+	43	0
+	+	359	0
+	+	360	2
+	+	371	27
+	+	78	0
+	+	209	0
+	+	510	2
+	+	511	0
+	+	371	0
+	+	366	0
+	+	371	0
+	+	369	0
+	+	370	3
+	+	24	0
+	+	100	2
+	+	507	13
+	+	365	3
+	+	366	0
+	+	365	0
+	+	366	3
+	+	366	0
+	+	366	0
+	+	366	0
+	+	365	2
+	+	367	5
+	+	368	5
+	+	369	5
+	+	371	5
+	+	372	3
+	+	373	0
+	+	365	0
+	+	361	39
+	+	365	2
+	+	365	5
+	+	364	16
+	+	365	0
+	+	363	0
+	+	365	0
+	+	362	0
+	+	334	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/build/threads/thread.c
+	"	1	0
+
+> ~/Dropbox/compsci/cs170/cs170_hw_template.tex
+	"	3	0
+	^	39	12
+	.	39	12
+	+	6	20
+	+	7	16
+	+	8	18
+	+	33	18
+	+	9	14
+	+	41	0
+	+	40	0
+	+	41	0
+	+	42	7
+	+	57	0
+	+	56	0
+	+	61	0
+	+	53	0
+	+	50	0
+	+	46	0
+	+	38	0
+	+	35	12
+	+	39	12
+
+> ~/Downloads/broadcom-wl/install
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-condvar.c
+	"	49	6
+
+> ~/Dropbox/compsci/cs170/hw4/self_grade_template_hw4.tex
+	"	227	7
+	^	227	8
+	.	227	7
+	+	326	0
+	+	38	0
+	+	37	3
+	+	41	0
+	+	76	0
+	+	83	65
+	+	85	96
+	+	87	78
+	+	96	0
 	+	129	0
-	+	120	1
-	+	54	14
-	+	541	52
-	+	629	8
-	+	613	22
-	+	629	20
-	+	164	38
-	+	460	0
-	+	150	69
-	+	628	0
-	+	457	0
-	+	456	0
-	+	456	0
-	+	457	35
-	+	458	0
+	+	137	63
+	+	139	49
+	+	141	62
+	+	144	62
+	+	146	49
+	+	148	62
+	+	158	0
+	+	158	0
+	+	158	0
+	+	175	0
+	+	182	83
+	+	228	0
+	+	326	0
+	+	193	0
+	+	192	0
+	+	193	0
+	+	210	0
+	+	217	79
+	+	219	49
+	+	221	70
+	+	225	19
+	+	229	0
+	+	294	0
+	+	301	62
+	+	303	62
+	+	305	66
+	+	307	73
+	+	313	86
+	+	315	123
+	+	319	72
+	+	317	80
+	+	315	123
+	+	311	73
+	+	309	0
+	+	227	7
+
+> ~/Dropbox/compsci/cs170/hw4/hw4.tex
+	"	146	0
+	.	35	0
+	+	102	96
+	+	104	11
+	+	79	7
+	+	147	0
+	+	149	152
+	+	149	48
+	+	149	289
+	+	152	20
+	+	100	556
+	+	152	477
+	+	152	440
+	+	152	354
+	+	152	505
+	+	152	659
+	+	152	553
+	+	155	393
+	+	157	456
+	+	159	4
+	+	100	520
+	+	100	519
+	+	160	121
+	+	160	25
+	+	160	314
+	+	160	171
+	+	165	39
+	+	168	21
+	+	176	20
+	+	174	19
+	+	207	23
+	+	171	24
+	+	177	42
+	+	174	0
+	+	177	51
+	+	175	47
+	+	176	20
+	+	177	20
+	+	168	21
+	+	181	25
+	+	179	32
+	+	178	0
+	+	207	11
+	+	179	78
+	+	182	20
+	+	181	19
+	+	183	48
+	+	180	22
+	+	179	53
+	+	185	11
+	+	167	15
+	+	179	15
+	+	185	15
+	+	186	31
+	+	204	27
+	+	186	125
+	+	204	15
+	+	186	129
+	+	186	82
+	+	186	26
+	+	166	19
+	+	186	37
+	+	199	11
+	+	200	262
+	+	200	111
+	+	204	248
+	+	186	68
+	+	186	76
+	+	204	281
+	+	186	140
+	+	204	303
+	+	207	0
+	+	198	0
+	+	197	4
+	+	197	0
+	+	195	84
+	+	186	58
+	+	192	24
+	+	186	20
+	+	192	25
+	+	188	26
+	+	190	30
+	+	191	11
+	+	190	8
+	+	191	19
+	+	194	21
+	+	195	83
+	+	188	13
+	+	195	66
+	+	197	0
+	+	204	73
+	+	197	0
+	+	195	93
+	+	196	49
+	+	204	209
+	+	204	97
+	+	204	329
+	+	204	185
+	+	206	67
+	+	202	81
+	+	206	122
+	+	35	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/thread.h
+	"	121	0
+	^	88	16
+	.	88	16
+	+	92	0
+	+	101	22
+	+	98	30
+	+	100	16
+	+	102	31
+	+	143	0
+	+	146	0
+	+	88	16
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-donate-sema.c
+	"	45	2
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.h
+	"	1	0
+	^	12	12
+	.	12	11
+	+	13	0
+	+	12	11
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/prority-condvar.c
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-sema.c
+	"	2	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/alarm-priority.c
+	"	55	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-donate-multiple.c
+	"	61	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-donate-one.c
+	"	45	10
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/readme.txt
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/.vimrc
+	"	3	0
+	^	85	20
+	.	85	19
+	+	40	11
+	+	39	0
+	+	41	0
+	+	88	0
+	+	75	25
+	+	79	0
+	+	76	0
+	+	79	25
+	+	39	12
+	+	42	0
+	+	82	14
+	+	84	0
+	+	84	0
+	+	84	0
+	+	84	0
+	+	82	0
+	+	83	0
+	+	84	0
+	+	84	0
+	+	87	0
+	+	86	0
+	+	84	0
+	+	84	0
+	+	84	14
+	+	84	12
+	+	84	13
+	+	84	10
+	+	84	13
+	+	84	11
+	+	83	12
+	+	82	9
+	+	84	0
+	+	84	18
+	+	85	19
+	+	85	26
+	+	84	17
+	+	85	19
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/devices/timer.c
+	"	213	5
+	^	213	6
+	.	213	5
+	+	96	3
+	+	99	3
+	+	100	22
+	+	101	37
+	+	20	6
+	+	43	21
+	+	103	29
+	+	107	28
+	+	107	27
+	+	105	1
+	+	111	85
+	+	112	0
+	+	124	3
+	+	112	62
+	+	113	62
+	+	114	50
+	+	125	0
+	+	105	81
+	+	109	0
+	+	206	59
+	+	104	40
+	+	214	31
+	+	43	12
+	+	104	21
+	+	101	8
+	+	21	0
+	+	21	83
+	+	21	6
+	+	105	22
+	+	214	3
+	+	215	0
+	+	105	33
+	+	204	44
+	+	204	34
+	+	204	34
+	+	206	0
+	+	204	0
+	+	205	6
+	+	214	0
+	+	122	0
+	+	117	0
+	+	122	8
+	+	117	48
+	+	120	21
+	+	121	0
+	+	206	58
+	+	105	47
+	+	112	60
+	+	113	60
+	+	117	27
+	+	111	88
+	+	117	26
+	+	117	0
+	+	204	0
+	+	215	0
+	+	204	0
+	+	214	0
+	+	109	0
+	+	213	5
+	+	106	3
+	+	108	11
+	+	108	36
+	+	108	33
+	+	211	26
+	+	212	7
+	+	211	6
+	+	108	3
+	+	106	2
+	+	106	3
+	+	212	6
+	+	211	7
+	+	108	0
+	+	213	5
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/init.c
+	"	276	1
+
+> ~/Dropbox/compsci/cs170/hw3/self_grade_template_hw3.tex
+	"	293	19
+	^	293	20
+	.	293	19
+	+	6	20
+	+	7	16
+	+	8	30
+	+	38	0
+	+	37	3
+	+	41	0
+	+	99	0
+	+	98	0
+	+	99	0
+	+	106	59
+	+	108	67
+	+	110	75
+	+	112	75
+	+	116	19
+	+	134	0
+	+	121	0
+	+	122	0
+	+	122	0
+	+	133	0
+	+	122	0
+	+	139	69
+	+	141	51
+	+	143	53
+	+	150	0
+	+	151	0
+	+	151	0
+	+	181	0
+	+	187	70
+	+	189	51
+	+	191	53
+	+	189	51
+	+	187	69
+	+	296	0
+	+	200	0
+	+	218	0
+	+	225	70
+	+	235	0
+	+	278	0
+	+	285	74
+	+	287	55
+	+	289	74
+	+	119	7
+	+	149	7
+	+	147	19
+	+	293	19
+
+> ~/Dropbox/compsci/cs170/hw3/hw3.tex
+	"	159	0
+	^	199	185
+	.	199	184
+	+	127	33
+	+	132	49
+	+	140	22
+	+	132	124
+	+	132	92
+	+	132	334
+	+	132	91
+	+	132	204
+	+	132	584
+	+	132	204
+	+	132	728
+	+	132	375
+	+	132	284
+	+	133	0
+	+	132	372
+	+	134	7
+	+	136	81
+	+	136	157
+	+	136	80
+	+	136	165
+	+	136	82
+	+	136	124
+	+	136	124
+	+	136	231
+	+	140	0
+	+	140	75
+	+	144	37
+	+	145	14
+	+	152	0
+	+	154	67
+	+	140	114
+	+	145	0
+	+	151	15
+	+	146	12
+	+	140	95
+	+	145	8
+	+	146	42
+	+	140	95
+	+	145	8
+	+	147	3
+	+	146	48
+	+	147	34
+	+	154	368
+	+	140	14
+	+	154	161
+	+	154	260
+	+	156	171
+	+	140	105
+	+	154	317
+	+	160	0
+	+	201	12
+	+	162	227
+	+	184	0
+	+	162	238
+	+	184	3
+	+	183	0
+	+	167	17
+	+	171	6
+	+	167	9
+	+	171	15
+	+	165	63
+	+	167	8
+	+	168	13
+	+	166	11
+	+	168	45
+	+	171	7
+	+	172	7
+	+	174	11
+	+	169	44
+	+	171	17
+	+	180	32
+	+	182	7
+	+	182	7
+	+	181	18
+	+	182	4
+	+	181	4
+	+	184	573
+	+	184	248
+	+	184	699
+	+	184	589
+	+	184	860
+	+	184	782
+	+	192	39
+	+	191	89
+	+	194	7
+	+	192	285
+	+	192	0
+	+	195	0
+	+	193	76
+	+	189	77
+	+	192	0
+	+	190	0
+	+	191	188
+	+	191	345
+	+	192	0
+	+	191	410
+	+	198	0
+	+	197	0
+	+	198	0
+	+	199	184
+
+> ~/Dropbox/compsci/cs162/code/group/.gitignore
+	"	2	17
+	^	2	18
+	.	2	17
+	+	2	28
+	+	3	0
+	+	1	9
+	+	2	0
+	+	3	0
+	+	2	17
+
+> ~/Dropbox/compsci/cs162/code/.gitignore
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/utils/pintos-gdb
+	"	4	63
+	^	4	73
+	.	4	72
+	+	4	72
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/lib/kernel/list.c
+	"	446	12
+	^	47	33
+	.	327	0
+	+	3	0
+	+	454	0
+	+	327	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/interrupt.c
+	"	81	5
+	^	267	18
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/lib/kernel/list.h
+	"	41	34
+	^	34	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/timer.h
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/devices/timer.h
+	"	26	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/interrupt.h
+	"	8	15
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/devices/synch.h
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/devices/pit.h
+	"	1	0
+
+> ~/.zshrc
+	"	52	311
+	^	52	312
+	.	52	311
+	+	48	17
+	+	8	22
+	+	48	13
+	+	8	23
+	+	52	311
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/misc/bochs-2.2.6-build.sh
+	"	41	11
+	^	19	2
+	.	19	0
+	+	19	0
+
+> ~/Downloads/bochs-2.2.6/config.h
+	"	868	25
+	^	868	26
+	.	868	25
+	+	868	25
+
+> ~/Downloads/bochs-2.2.6/config
+	"	1	0
+
+> ~/Downloads/bochs-2.2.6/bx_debug/symbols.cc
+	"	83	9
+	^	83	10
+	.	83	10
+	+	83	0
+	+	85	13
+	+	83	13
+	+	85	10
+	+	83	10
+
+> bx_debug/symbols.cc
+	"	1	0
+
+> ~/Downloads/bochs-2.2.6/with-dbg/bx_debug/dbg_main.o
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/group/pintos/src/misc/gdb-macros
+	"	1	0
+
+> ~/Downloads/bochs-2.2.6/configure
+	"	53	0
+
+> ~/Dropbox/compsci/cs162/bochs-2.6.7/build/linux/bochs-dlx.in
+	"	28	0
+
+> ~/Dropbox/compsci/cs162/bochs-2.6.7/install-sh
+	"	227	0
+
+> ~/Downloads/bochs-2.2.6/build/linux/README.linux-binary
+	"	1	0
+
+> ~/Dropbox/compsci/cs188/p2/.gitignore
+	"	1	4
+	^	1	5
+	.	2	0
+	+	2	0
+
+> ~/Dropbox/compsci/cs188/p2/multiAgents.py
+	"	227	0
+	.	99	0
+	+	76	0
+	+	99	0
+
+> ~/Dropbox/compsci/cs188/p2/autograder.py
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/shell.c
+	"	211	8
+	.	200	18
+	+	166	45
+	+	168	20
+	+	169	24
+	+	168	20
+	+	166	53
+	+	168	20
+	+	167	5
+	+	168	5
+	+	169	5
+	+	170	5
+	+	171	25
+	+	172	27
+	+	173	27
+	+	175	4
+	+	320	53
+	+	93	0
+	+	73	52
+	+	89	52
+	+	89	21
+	+	89	12
+	+	89	11
+	+	89	0
+	+	89	0
+	+	89	0
+	+	98	0
+	+	242	59
+	+	131	13
+	+	192	23
+	+	193	29
+	+	192	12
+	+	195	34
+	+	192	31
+	+	214	0
+	+	212	21
+	+	193	28
+	+	312	23
+	+	191	0
+	+	132	46
+	+	130	102
+	+	258	27
+	+	259	28
+	+	323	37
+	+	118	0
+	+	93	7
+	+	93	53
+	+	96	0
+	+	93	55
+	+	93	11
+	+	180	29
+	+	93	0
+	+	96	0
+	+	93	8
+	+	181	11
+	+	204	22
+	+	181	14
+	+	214	13
+	+	202	31
+	+	203	3
+	+	205	0
+	+	297	38
+	+	304	38
+	+	308	31
+	+	186	24
+	+	187	33
+	+	189	15
+	+	241	50
+	+	206	32
+	+	241	29
+	+	260	36
+	+	333	12
+	+	174	0
+	+	333	20
+	+	334	24
+	+	335	0
+	+	260	24
+	+	243	0
+	+	263	15
+	+	264	15
+	+	318	0
+	+	317	0
+	+	321	0
+	+	91	0
+	+	84	15
+	+	86	0
+	+	92	37
+	+	93	26
+	+	92	44
+	+	93	59
+	+	95	0
+	+	261	43
+	+	262	20
+	+	241	0
+	+	94	45
+	+	207	26
+	+	189	15
+	+	205	21
+	+	214	11
+	+	10	0
+	+	11	0
+	+	200	18
+
+> ~/Dropbox/compsci/cs170/hw1/hw1.tex
+	"	39	1
+
+> ~/myscripts/ppt
+	"	2	67
+	^	2	68
+	.	2	68
+	+	1	8
+	+	2	0
+	+	1	2
+	+	2	68
+
+> ~/myscripts/nmgui
+	"	1	0
+
+> /usr/share/alsa/alsa.conf
+	"	221	0
+
+> /proc/config.gz
+	"	3093	13
+	.	6974	0
+	+	6974	0
+
+> ~/.config/awesome/themes/solarized-powerarrow/theme.lua
+	"	26	92
+	^	26	93
+	.	26	92
+	+	107	39
+	+	26	92
 
 > ~/.config/compton.conf
 	"	53	0
-	^	53	1
-	.	55	0
-	+	1	0
-	+	50	17
-	+	51	21
-	+	53	18
-	+	52	17
-	+	51	21
-	+	52	18
-	+	50	17
+	^	51	23
+	.	51	22
+	+	39	0
+	+	83	18
+	+	85	19
 	+	52	20
-	+	51	21
-	+	52	19
-	+	50	15
-	+	55	12
-	+	53	18
-	+	55	13
-	+	50	17
-	+	55	14
-	+	38	20
-	+	55	0
+	+	51	22
 
-> ~/cs61b/projects/project3/cs61b-project3/src/dict/HashTableChained.java
-	"	149	0
-	.	181	19
-	+	181	19
+> ~/.config/awesome/extended_powerarrow.lua
+	"	2	27
+	^	2	28
+	.	2	28
+	+	1	94
+	+	3	0
+	+	4	11
+	+	1	65
+	+	2	28
 
-> ~/cs61b/projects/project3/cs61b-project3/src/dict/Entry.java
-	"	2	0
-
-> ~/cs61b/projects/project3/cs61b-project3/src/readme
-	"	286	34
-	^	138	27
-	.	112	16
-	+	112	16
-
-> ~/cs61b/projects/project3/cs61b-project3/src/KruskalTest.java
-	"	169	0
-
-> ~/cs61b/projects/project3/cs61b-project3/src/WUGTest.java
-	"	769	0
-
-> ~/cs61b/projects/project3/cs61b-project3/src/graph/WUGraph.java
-	"	113	16
-	^	254	33
-	.	113	0
-	+	117	66
-	+	124	36
-	+	133	36
-	+	117	92
-	+	120	39
-	+	120	27
-	+	117	49
-	+	123	47
-	+	120	48
-	+	155	28
-	+	155	13
-	+	151	47
-	+	155	13
-	+	155	12
-	+	130	22
-	+	136	0
-	+	128	18
-	+	130	0
-	+	155	5
-	+	151	0
-	+	151	37
-	+	151	19
-	+	151	17
-	+	152	52
-	+	153	24
-	+	151	42
-	+	152	11
-	+	153	45
-	+	155	0
-	+	154	18
-	+	156	0
-	+	148	0
-	+	146	26
-	+	151	0
-	+	150	55
-	+	116	21
-	+	117	84
-	+	16	0
-	+	20	0
-	+	27	0
-	+	27	0
-	+	33	0
-	+	201	42
-	+	199	99
-	+	203	31
-	+	209	24
-	+	212	9
-	+	214	37
-	+	223	37
-	+	116	30
-	+	200	0
-	+	199	57
-	+	200	0
-	+	212	9
-	+	206	26
-	+	212	12
-	+	228	0
-	+	212	0
-	+	205	0
-	+	243	8
-	+	252	0
-	+	286	12
-	+	291	0
-	+	218	32
-	+	228	89
-	+	116	42
-	+	120	0
-	+	116	0
-	+	118	12
-	+	121	27
-	+	121	28
-	+	113	20
-	+	112	43
-	+	113	43
-	+	113	43
-	+	121	27
-	+	113	0
-	+	245	0
-	+	248	0
-	+	108	34
-	+	119	36
-	+	116	0
-	+	114	0
-	+	113	0
-	+	148	78
-	+	113	0
-	+	113	0
-	+	148	78
-	+	255	38
-	+	255	52
-	+	255	39
-	+	255	80
-	+	225	38
-	+	255	39
-	+	255	12
-	+	254	41
-	+	256	12
-	+	255	15
-	+	254	32
-	+	113	0
-
-> ~/cs61b/projects/project3/cs61b-project3/src/graph/Edge.java
-	"	25	4
-	^	13	41
-	.	13	41
-	+	5	12
-	+	9	30
-	+	50	0
-	+	13	52
-	+	15	23
-	+	14	21
-	+	16	8
-	+	13	48
-	+	31	9
-	+	23	15
-	+	41	0
-	+	29	0
-	+	39	31
-	+	11	30
-	+	43	11
-	+	27	14
-	+	44	24
-	+	45	5
-	+	49	0
-	+	27	29
-	+	3	13
-	+	19	36
-	+	21	0
-	+	17	0
-	+	13	41
-
-> ~/Dropbox/cs61b/hw/hw5/list/DListNode.java
-	"	159	0
-
-> ~/cs61b/projects/project3/cs61b-project3/src/graph/VertexPair.java
-	"	21	0
-	^	20	1
-
-> /usr/bin/xbindkeys
-	"	1	0
-
-> /usr/include/X11/keysymdef.h
-	"	1511	9
-
-> /sys/devices/pci0000:00/0000:00:02.0/backlight/acpi_video0/.xbindkeysrc
-	"	1	0
-
-> /usr/include/X11/keysym.h
-	"	74	0
-
-> ~/.local/share/.xinitrc
-	"	1	0
-
-> ~/.bash
-	"	1	0
-
-> ~/.config/sxhkd/sxhkdrc
-	"	48	0
-	^	48	0
-	.	65	36
-	+	16	0
-	+	40	4
-	+	76	15
-	+	64	26
-	+	61	18
-	+	62	21
-	+	64	24
-	+	65	33
-	+	93	0
-	+	92	0
-	+	93	0
-	+	6	25
-	+	61	18
-	+	62	21
-	+	64	26
-	+	65	36
-
-> ~/.config/bspwm/panel/status_bar
-	"	1	1
-	.	1	0
-	+	1	0
-	+	1	12
-	+	7	0
-	+	1	0
-	+	7	0
-	+	1	0
-
-> ~/.config/bspwm/panel/panel_dzen2
-	"	1	0
-	.	1	0
-	+	1	0
-
-> ~/.config/bspwm/panel/bspwmrc
-	"	3	0
-
-> /etc/pommed.conf.mactel
-	"	1	0
-
-> /etc/pommed.conf.pmac
-	"	2	0
-
-> ~/Downloads/pommed-light/pommed.conf.pmac
-	"	1	0
-
-> ~/Downloads/pommed-light/pommed.conf.mactel
-	"	1	0
-
-> /etc/X11/xinit/xinitrc
-	"	1	0
-
-> ~/compton.conf
-	"	1	0
-
-> /usr/share/fonts/misc/fonts.alias
-	"	40	50
-
-> ~/.conf
-	"	1	0
-
-> ~/.config/bspwm/panel/p
-	"	1	0
-
-> /tmp/panel-fifo
-	"	1	0
-
-> ~/scripts/battery.sh
-	"	8	0
-	.	1	0
-	+	1	0
-
-> ~/.config/conpton.conf
-	"	1	0
-
-> ~/.profile
-	"	1	0
-	^	1	23
-	.	1	7
-	+	1	7
-
-> /etc/profile
-	"	1	0
-	^	29	35
-	.	29	34
-	+	29	34
-
-> /usr/bin/bspwim-session
-	"	1	0
-
-> ~/Downloads/dotfiles-master/README.md
-	"	1	0
-
-> ~/Downloads/dotfiles-master/scr
-	"	1	0
-
-> ~/Dropbox/cs61b/hw/hw6/Homework6Test.java
-	"	9	27
-
-> ~/.Xresources
-	"	1	0
-	^	1	25
-	.	1	24
-	+	31	24
-	+	34	24
-	+	58	25
-	+	31	19
-	+	34	19
-	+	58	20
-	+	20	0
-	+	1	0
-	+	135	22
-	+	2	0
-	+	1	24
-
-> ~/.config/bspwm/autostart
-	"	1	24
-	^	1	25
-	.	1	24
-	+	1	24
-
-> /usr/share/icons/default/index.theme
-	"	2	18
-	^	2	19
-	.	2	18
-	+	2	18
-
-> ~/.xinitec
-	"	1	0
-
-> /tmp/panel.log
-	"	1	0
-
-> ~/cs61b/projects/project3/cs61b-project3/src/graphalg/Kruskal.java
-	"	19	0
-
-> ~/cs61b/projects/project3/graph/WUGraph.java
-	"	18	0
-
-> ~/cs61b/projects/project3/WUGraph.java
-	"	1	0
-
-> /.xinitrc
-	"	1	0
-
-> ~/.config/bspwm/.bspwmrc
-	"	4	29
-	^	4	30
+> ~/.config/awesome/vain/layout/init.lua
+	"	7	11
+	^	1	0
 	.	5	0
+	+	5	0
+
+> ~/.config/awesome/vain/init.lua
+	"	2	0
+	.	2	0
+	+	2	0
+
+> ~/.gtkrc-2.0
+	"	1	0
+
+> ~/.bashrc
+	"	1	0
+
+> ~/.xinitrc
+	"	16	0
+	^	38	0
+	.	38	0
+	+	34	0
+	+	32	0
+	+	35	0
+	+	36	0
+	+	38	0
+	+	31	7
+	+	20	0
+	+	18	25
+	+	19	21
+	+	38	16
+	+	39	0
+	+	38	0
+
+> ~/Downloads/broadcom-wl/PKGBUILD
+	"	40	2
+	.	40	0
+	+	20	33
+	+	36	0
+	+	41	0
+	+	37	0
+	+	41	0
+	+	37	0
+	+	40	0
+
+> ~/Downloads/broadcom-wl/MAKEPKG
+	"	1	0
+
+> ~/Downloads/broadcom-wl/null-pointer-crash.patch
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Downloads/broadcom-wl/gcc.patch
+	"	1	0
+
+> ~/Downloads/broadcom-wl/license.patch
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/shell.
+	"	1	0
+
+> ~/Dropbox/compsci/cs188/contest/capture.py
+	"	775	38
+
+> ~/Dropbox/compsci/cs170/hw2/hw2_grades.tex
+	"	49	4
+	^	49	5
+	.	49	4
+	+	9	14
+	+	45	5
+	+	46	5
+	+	47	5
+	+	48	5
+	+	49	5
+	+	50	5
+	+	52	5
+	+	52	0
+	+	51	0
+	+	52	0
+	+	51	8
+	+	50	7
+	+	49	8
+	+	48	8
+	+	47	8
+	+	46	8
+	+	45	9
+	+	49	8
+	+	48	8
+	+	47	8
+	+	46	8
+	+	45	9
+	+	58	0
+	+	45	3
+	+	69	0
+	+	71	0
+	+	73	0
+	+	46	4
+	+	47	4
+	+	74	0
+	+	90	0
+	+	167	0
+	+	91	0
+	+	48	5
+	+	50	5
+	+	123	0
+	+	124	0
+	+	151	0
+	+	152	0
+	+	153	0
+	+	167	0
+	+	58	0
+	+	34	3
+	+	35	0
+	+	49	4
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/process.c
+	"	17	0
+	^	42	28
+	.	46	0
+	+	27	0
+	+	19	19
+	+	19	12
+	+	24	0
+	+	19	41
+	+	19	41
+	+	29	4
+	+	19	41
+	+	23	1
+	+	22	35
+	+	56	0
+	+	56	24
+	+	67	24
+	+	69	0
+	+	19	0
+	+	20	0
+	+	67	24
+	+	56	22
+	+	41	25
+	+	67	21
+	+	56	0
+	+	19	0
+	+	67	24
+	+	56	0
+	+	67	33
+	+	19	0
+	+	66	3
+	+	19	0
+	+	65	3
+	+	41	4
+	+	35	0
+	+	56	0
+	+	37	20
+	+	36	24
+	+	35	5
+	+	36	5
+	+	37	5
+	+	65	5
+	+	66	5
+	+	67	5
+	+	17	0
+	+	17	16
+	+	56	0
+	+	68	0
+	+	67	23
+	+	45	20
+	+	44	14
+	+	45	23
+	+	44	15
+	+	45	31
+	+	48	4
+	+	38	20
+	+	39	32
+	+	40	0
+	+	62	0
+	+	65	0
+	+	62	0
+	+	39	32
+	+	63	32
+	+	45	31
+	+	17	0
+	+	56	0
+	+	29	0
+	+	19	5
+	+	20	5
+	+	21	5
+	+	22	5
+	+	23	5
+	+	16	24
+	+	18	20
+	+	65	4
+	+	66	4
+	+	67	4
+	+	35	4
+	+	36	4
+	+	37	4
+	+	67	21
+	+	18	17
+	+	35	5
+	+	36	5
+	+	37	5
+	+	65	6
+	+	66	5
+	+	67	5
+	+	45	37
+	+	47	3
+	+	41	0
+	+	43	35
+	+	16	5
+	+	67	4
+	+	42	0
+	+	43	0
+	+	42	25
+	+	42	27
+	+	46	0
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/shell.h
+	"	13	1
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/test.txt
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/parse.c
+	"	1	0
+
+> ~/Dropbox/compsci/cs170/hw2/hw2.tex
+	"	35	0
+	^	150	1
+	.	3	0
+	+	141	350
+	+	141	0
+	+	141	387
+	+	144	0
+	+	145	0
+	+	144	162
+	+	144	70
+	+	144	185
+	+	73	0
+	+	74	0
+	+	110	2
+	+	74	138
+	+	76	10
+	+	74	277
+	+	75	0
+	+	82	6
+	+	78	15
+	+	82	14
+	+	104	0
+	+	82	32
+	+	82	0
+	+	82	0
+	+	83	4
+	+	58	16
+	+	113	0
+	+	82	0
+	+	105	0
+	+	83	10
+	+	76	12
+	+	82	14
+	+	105	21
+	+	83	12
+	+	105	0
+	+	79	0
+	+	80	22
+	+	83	13
+	+	87	40
+	+	103	0
+	+	86	33
+	+	87	63
+	+	88	0
+	+	84	60
+	+	88	53
+	+	84	60
+	+	86	37
+	+	87	39
+	+	91	11
+	+	90	19
+	+	91	37
+	+	86	42
+	+	91	50
+	+	90	15
+	+	91	18
+	+	86	48
+	+	87	51
+	+	91	60
+	+	94	8
+	+	95	8
+	+	94	50
+	+	95	27
+	+	84	45
+	+	89	64
+	+	93	56
+	+	95	61
+	+	100	57
+	+	79	55
+	+	100	235
+	+	100	68
+	+	100	447
+	+	100	56
+	+	100	610
+	+	101	0
+	+	102	159
+	+	100	450
+	+	100	235
+	+	100	0
+	+	100	451
+	+	100	263
+	+	102	220
+	+	92	59
+	+	92	0
+	+	91	15
+	+	92	0
+	+	91	44
+	+	102	341
+	+	102	274
+	+	102	791
+	+	102	382
+	+	103	0
+	+	102	392
+	+	102	709
+	+	102	872
+	+	104	63
+	+	104	146
+	+	102	281
+	+	104	372
+	+	104	96
+	+	104	402
+	+	1	0
+	+	3	0
+
+> ~/Dropbox/compsci/cs170/cs170_selfgrade_template.tex
+	"	1	0
+	^	10	15
+	.	9	14
+	+	6	14
+	+	7	16
+	+	8	18
+	+	9	14
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/shell
+	"	1	0
+
+> ~/Dropbox/compsci/cs188/contest/captureGraphicsDisplay.py
+	"	250	14
+	^	250	15
+	.	250	14
+	+	251	0
+	+	250	14
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/process.h
+	"	17	12
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/forever.c
+	"	7	22
+	^	7	23
+	.	7	22
+	+	4	34
+	+	5	15
+	+	9	0
+	+	7	23
+	+	2	0
+	+	1	14
+	+	6	16
+	+	7	22
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/main.c
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/shellc.
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/process.
+	"	1	0
+
+> ~/Dropbox/compsci/cs188/contest/keyboardAgents.py
+	"	37	7
+	^	37	8
+	.	37	8
+	+	35	2
+	+	32	0
+	+	35	0
+	+	36	0
+	+	34	0
+	+	33	0
 	+	32	0
 	+	29	0
+	+	29	162
 	+	29	0
-	+	28	0
-	+	29	0
-	+	5	0
-	+	5	0
-	+	4	0
-	+	2	9
-	+	3	0
-	+	4	30
-	+	5	0
+	+	33	0
+	+	34	0
+	+	36	0
+	+	37	0
+	+	36	8
+	+	37	8
 
-> ~/Downloads/bspwm/bspwm/examples/bspwmrc
+> ~/Dropbox/compsci/cs188/contest/pacman.py
+	"	477	39
+
+> ~/Dropbox/compsci/cs188/contest/pacmanAgents.py
 	"	1	0
+
+> ~/Dropbox/compsci/cs188/contest/captureAgents.py
+	"	1	0
+
+> ~/Dropbox/compsci/cs188/contest/baselineTeam.py
+	"	1	0
+
+> ~/Dropbox/compsci/cs188/contest/game.py
+	"	1	0
+
+> ~/Dropbox/compsci/cs188/search/VERSION
+	"	1	0
+
+> ~/Dropbox/compsci/cs170/hw2/process.c
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/parse.
+	"	1	0
+
+> ~/Dropbox/compsci/cs162/code/personal/hw1/test
+	"	1	1

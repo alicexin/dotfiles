@@ -51,8 +51,8 @@
 
 #Remark
 "kbdlight up"
-    m:0x0 + c:238
-    XF86KbdBrightnessUp 
+    m:0x400 + b:3   (mouse)
+     
 
 #Remark
 "amixer -q set Master 10%- unmute"

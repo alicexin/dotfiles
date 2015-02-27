@@ -17,3 +17,5 @@ PATH=$PATH:~/.config/bspwm/panel
 
 # Transparency
 [ -n "$XTERM_VERSION" ] && transset-df -a >/dev/null
+
+export TERM=xterm
