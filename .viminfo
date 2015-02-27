@@ -167,18 +167,20 @@ $
 	\
 
 # File marks:
-'0  950  0  ~/pacman.txt
-'1  316  0  /mnt/EFI/BOOT/refind.conf
-'2  141  9  /mnt/EFI/BOOT/refind.conf
-'3  667  0  ~/.config/awesome/rc.lua
-'4  104  0  /var/log/Xorg.0.log
-'5  1  0  /var/log/faillog
-'6  4767  120  /var/log/pacman.log
-'7  10  0  /etc/modules-load.d
-'8  4979  5  /var/log/pacman.log
-'9  228  42  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
+'0  69  1  ~/.vimrc
+'1  950  0  ~/pacman.txt
+'2  316  0  /mnt/EFI/BOOT/refind.conf
+'3  141  9  /mnt/EFI/BOOT/refind.conf
+'4  667  0  ~/.config/awesome/rc.lua
+'5  104  0  /var/log/Xorg.0.log
+'6  1  0  /var/log/faillog
+'7  4767  120  /var/log/pacman.log
+'8  10  0  /etc/modules-load.d
+'9  4979  5  /var/log/pacman.log
 
 # Jumplist (newest first):
+-'  69  1  ~/.vimrc
+-'  1  0  ~/.vimrc
 -'  950  0  ~/pacman.txt
 -'  332  0  ~/pacman.txt
 -'  1  0  ~/pacman.txt
@@ -275,11 +277,50 @@ $
 -'  1  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-donate-sema.c
 -'  55  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/tests/threads/priority-donate-sema.c
 -'  376  9  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
--'  377  2  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
--'  281  0  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
--'  365  5  ~/Dropbox/compsci/cs162/code/group/pintos/src/threads/synch.c
 
 # History of marks within files (newest to oldest):
+
+> ~/.vimrc
+	"	69	1
+	^	85	20
+	.	85	19
+	+	40	11
+	+	39	0
+	+	41	0
+	+	88	0
+	+	75	25
+	+	79	0
+	+	76	0
+	+	79	25
+	+	39	12
+	+	42	0
+	+	82	14
+	+	84	0
+	+	84	0
+	+	84	0
+	+	84	0
+	+	82	0
+	+	83	0
+	+	84	0
+	+	84	0
+	+	87	0
+	+	86	0
+	+	84	0
+	+	84	0
+	+	84	14
+	+	84	12
+	+	84	13
+	+	84	10
+	+	84	13
+	+	84	11
+	+	83	12
+	+	82	9
+	+	84	0
+	+	84	18
+	+	85	19
+	+	85	26
+	+	84	17
+	+	85	19
 
 > ~/pacman.txt
 	"	950	0
@@ -844,48 +885,6 @@ $
 	^	1	0
 	.	1	0
 	+	1	0
-
-> ~/.vimrc
-	"	3	0
-	^	85	20
-	.	85	19
-	+	40	11
-	+	39	0
-	+	41	0
-	+	88	0
-	+	75	25
-	+	79	0
-	+	76	0
-	+	79	25
-	+	39	12
-	+	42	0
-	+	82	14
-	+	84	0
-	+	84	0
-	+	84	0
-	+	84	0
-	+	82	0
-	+	83	0
-	+	84	0
-	+	84	0
-	+	87	0
-	+	86	0
-	+	84	0
-	+	84	0
-	+	84	14
-	+	84	12
-	+	84	13
-	+	84	10
-	+	84	13
-	+	84	11
-	+	83	12
-	+	82	9
-	+	84	0
-	+	84	18
-	+	85	19
-	+	85	26
-	+	84	17
-	+	85	19
 
 > ~/Dropbox/compsci/cs162/code/group/pintos/src/devices/timer.c
 	"	213	5
