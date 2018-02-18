@@ -1,88 +1,162 @@
-set nu
-set expandtab
-set tabstop=4
-set shiftwidth=4
-filetype plugin on
-filetype indent on
+" Welcome to Vim (http://go/vim).
+"
+" If you see this file, your homedir was just created on this workstation.
+" That means either you are new to Google (in that case, welcome!) or you
+" got yourself a faster machine.
+" Either way, the main goal of this configuration is to help you be more
+" productive; if you have ideas, praise or complaints, direct them to
+" vi-users@google.com (http://g/vi-users). We'd especially like to hear from you
+" if you can think of ways to make this configuration better for the next
+" Noogler.
+" If you want to learn more about Vim at Google, see http://go/vimintro.
 
-"set showmatch"
-"set expandtab"
-"set ai"
-"set si"
+" Enable modern Vim features not compatible with Vi spec.
+set nocompatible
 
-" All system-wide defaults are set in $VIMRUNTIME/debian.vim and sourced by
-" the call to :runtime you can find below.  If you wish to change any of those
-" settings, you should do it in this file (/etc/vim/vimrc), since debian.vim
-" will be overwritten everytime an upgrade of the vim packages is performed.
-" It is recommended to make changes after sourcing debian.vim since it alters
-" the value of the 'compatible' option.
+" Use the 'google' package by default (see http://go/vim/packages).
+source /usr/share/vim/google/core.vim
 
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages available in Debian.
-runtime! debian.vim
+" Plugin configuration.
+" See http://google3/devtools/editors/vim/examples/ for example configurations
+" and http://go/vim/plugins for more information about vim plugins at Google.
 
-" Uncomment the next line to make Vim more Vi-compatible
-" NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
-" options, so any other options should be set AFTER setting 'compatible'.
-"set compatible
+" Plugin loading is commented out below - uncomment the plugins you'd like to
+" load.
 
-" Vim5 and later versions support syntax highlighting. Uncommenting the next
-" line enables syntax highlighting by default.
-if has("syntax")
-  syntax on
+" Load google's formatting plugins (http://go/vim/plugins/codefmt-google).
+" The default mapping is \= (or <leader>= if g:mapleader has a custom value),
+" with
+" - \== formatting the current line or selected lines in visual mode
+"   (:FormatLines).
+" - \=b formatting the full buffer (:FormatCode).
+"
+" To bind :FormatLines to the same key in insert and normal mode, add:
+"   noremap <C-K> :FormatLines<CR>
+"   inoremap <C-K> <C-O>:FormatLines<CR>
+Glug codefmt plugin[mappings] gofmt_executable="goimports"
+Glug codefmt-google
+
+" Enable autoformatting on save for the languages at Google that enforce
+" formatting, and for which all checked-in code is already conforming (thus,
+" autoformatting will never change unrelated lines in a file).
+augroup autoformat_settings
+  " For BUILD files and Go all of Google's files must be formatted.
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType go AutoFormatBuffer gofmt
+augroup END
+
+" Load YCM (http://go/ycm) for semantic auto-completion and quick syntax
+" error checking. Pulls in a google3-enabled version of YCM itself and
+" a google3-specific default configuration.
+Glug youcompleteme-google
+let g:ycm_key_list_select_completion = ['<TAB>']
+let g:ycm_key_list_previous_completion = ['<S-TAB>']
+let g:ycm_key_list_stop_completion = ['<C-y>', '<UP>', '<DOWN>']
+
+" Load the automated blaze dependency integration for Go.
+" Note: for Go, blazedeps uses the Go team's glaze tool, which is fully
+" supported by the Go team; for other languages. Note that the plugin is
+" currently unsupported for other languages.
+"Glug blazedeps auto_filetypes=`['go']`
+
+" Load piper integration (http://wiki/Main/VimPerforce).
+"Glug piper plugin[mappings]
+
+" Load the Critique integration. Use :h critique for more details.
+"Glug critique plugin[mappings]
+
+" Load blaze integration (http://go/blazevim).
+"Glug blaze plugin[mappings]
+
+" Load the syntastic plugin (http://go/vim/plugins/syntastic-google).
+" Note: this requires installing the upstream syntastic plugin from
+" https://github.com/scrooloose/syntastic.
+Glug syntastic-google
+
+" Load the ultisnips plugin (http://go/ultisnips).
+" Note: this requires installing the upstream ultisnips plugin from
+" https://github.com/SirVer/ultisnips.
+Glug ultisnips-google
+
+" Glug fileswitch
+" Glug findinc
+Glug ft-java
+Glug ft-cpp
+Glug ft-python
+" Glug relatedfiles
+
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+
+Plug 'joshdick/onedark.vim'
+if (has("termguicolors"))
+  set termguicolors
+endif
+let g:onedark_termcolors=256
+let g:onedark_color_overrides = {
+\ "black": {"gui": "#262626", "cterm": "235", "cterm16": "0" },
+\ "blue": { "gui": "#5fafff", "cterm": "75", "cterm16": "4" },
+\ "grey": { "gui": "#3a3a3a", "cterm": "237", "cterm16": "8" }
+\}
+if (has("autocmd") && !has("gui_running"))
+  augroup colorset
+    autocmd!
+    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+    let s:black = { "gui": "#000000", "cterm": "255", "cterm16" : "0" }
+    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white, "bg": s:black}) " `bg` will not be styled since there is no `bg` setting
+  augroup END
 endif
 
-" If using a dark background within the editing area and syntax highlighting
-" turn on this option as well
+Plug 'itchyny/lightline.vim'
+set laststatus=2
+if !has('gui_running')
+  set t_Co=256
+endif
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'onedark',
+      \ }
+
+Plug '~/.fzf'
+nnoremap t :FZF<CR>
+
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+
+" Initialize plugin system
+call plug#end()
+
+" All of your plugins must be added before the following line.
+
+" Enable file type based indent configuration and syntax highlighting.
+" Note that when code is pasted via the terminal, vim by default does not detect
+" that the code is pasted (as opposed to when using vim's paste mappings), which
+" leads to incorrect indentation when indent mode is on.
+" To work around this, use ":set paste" / ":set nopaste" to toggle paste mode.
+" You can also use a plugin to:
+" - enter insert mode with paste (https://github.com/tpope/vim-unimpaired)
+" - auto-detect pasting (https://github.com/ConradIrwin/vim-bracketed-paste)
+filetype plugin indent on
+syntax on
+set nu
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set ts=4  sts=4 sw=4 et
+colorscheme onedark
 syntax enable
-let g:solarized_termcolors=256
-set t_Co=256
 set background=dark
-colorscheme jellybeans
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 
-" Uncomment the following to have Vim jump to the last position when
-" reopening a file
-"if has("autocmd")
-"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-"endif
-
-" Uncomment the following to have Vim load indentation rules and plugins
-" according to the detected filetype.
-"if has("autocmd")
-"  filetype plugin indent on
-"endif
-
-" The following are commented out as they cause vim to behave a lot
-" differently from regular Vi. They are highly recommended though.
-"set showcmd		" Show (partial) command in status line.
-"set showmatch		" Show matching brackets.
-"set ignorecase		" Do case insensitive matching
-"set smartcase		" Do smart case matching
-"set incsearch		" Incremental search
-"set autowrite		" Automatically save before commands like :next and :make
-"set hidden		" Hide buffers when they are abandoned
-set mouse=a		" Enable mouse usage (all modes)
+set mouse=a
 set ww+=<,>,h,l,[,]
-
-" Source a global configuration file if available
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
-endif
-
-
-runtime! ftplugin/man.vim
-
-let g:vim_markdown_folding_disabled=1
-
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
 
 map <Up> gk
 map <Down> gj
 imap <Up> <Esc>gka
 imap <Down> <Esc>gja
-
-
-

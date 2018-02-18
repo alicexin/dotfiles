@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/usr/local/google/home/alicesheng/android/wear-master/device/borqs/mullet'
+let g:netrw_dirhist_2='/usr/local/google/home/alicesheng/android/wear-master/frameworks/base'
+let g:netrw_dirhist_3='/usr/local/google/home/alicesheng/android/wear-master/system/core/lmkd'
+let g:netrw_dirhist_4='/usr/local/google/home/alicesheng/android/wear-master'
+let g:netrw_dirhist_5='/usr/local/google/home/alicesheng/Downloads/release/examples/loopback'
+let g:netrw_dirhist_6='/usr/local/google/home/alicesheng/android/oc-wear-dev/frameworks/base/libs/hwui'
+let g:netrw_dirhist_7='/opt/google/chrome-remote-desktop'
+let g:netrw_dirhist_8='/usr/local/google/home/alicesheng/.vim'
+let g:netrw_dirhist_9='/usr/local/google/home/alicesheng/.oh-my-zsh/custom'
